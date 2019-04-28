@@ -1,36 +1,43 @@
 @extends('admin.layout.master')
 @section('content')
-<h1 class="h3 mb-4 text-gray-800">ผู้ใช้งาน
-    <span class="float-right"><a href="/admin/user/create" class="btn btn-sm btn-success"><i class="fa fa-plus"></i> เพิ่มผู้ใช้งาน</a></span>
+<h1 class="h3 mb-4 text-gray-800">สินค้า
+    <span class="float-right"><a href="/admin/product/create" class="btn btn-sm btn-success"><i class="fa fa-plus"></i> เพิ่มสินค้า</a></span>
 </h1>
 
 <div class="card">
     <div class="card-heading">
         <div class="container mt-3">
-            <h4 class="card-title">รายการผู้ใช้งาน</h4>
+            <h4 class="card-title">รายการสินค้า</h4>
         </div>
         <table class="table">
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>ประเภทผู้ใช้งาน</th>
-                    <th>ชื่อ - สกุล</th>
-                    <th>อีเมล์</th>
-                    <th>จัดการ</th>
+                   <th>รูปสินค้า</th>
+                    <th>ชื่อ สินค้า</th>
+                    <th>หมวดหมู่สินค้า</th>
+                    <th>จำนวน</th>
+                    <th>รายละเอียด</th>
+                    <th>ราคา</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
-                @foreach($users as $user)
+                @foreach($products as $product)
                 <tr>
-                    <td>{{$user->id}}</td>
-                    <td>{{$user->userType->name}}</td>
-                    <td>{{$user->fullname}}</td>
-                    <td>{{$user->email}}</td>
+                    <td>{{$product->id}}</td>
+                    <td><img src="{{$product->thumbnail}}" alt="{{$product->name}}" width="200"></td>
+                    <td>{{$product->name}}</td>
+                    <td>-</td>
+                    <td>{{$product->quantity}}</td>
+                    <td>{{$product->detail}}</td>
+                    <td>{{$product->price}}</td>
+
                     <td>
                         <div class="button-group">
-                            <a href="/admin/user/{{$user->id}}/edit" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
+                            <a href="/admin/product/{{$product->id}}/edit" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
 
-                            <a href="javaScript: deleteItem('{{$user->id  }}')" class="btn  btn-danger btn-sm">
+                            <a href="javaScript: deleteItem('{{$product->id  }}')" class="btn  btn-danger btn-sm">
                                     <i class="fa fa-trash"></i>
                                 </a>
                         </div>
@@ -55,8 +62,8 @@
                     showCancelButton: true,
                 }).then(function (result) {
                     if (result.value) {
-                        axios.delete('/admin/user/' + id).then(function (response) {
-                            window.location.href = "/admin/user/";
+                        axios.delete('/admin/product/' + id).then(function (response) {
+                            window.location.href = "/admin/product/";
                         }).catch(function (error) {
                             console.log(error.response)
                             swal('เกิดข้อผิดพลาด', 'ไม่สามารถลบข้อมูลได้ \n ' + error.response.statusText,

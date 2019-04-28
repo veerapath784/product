@@ -11,6 +11,7 @@ class UserController extends Controller
 {
 
     protected $rules = [
+        'user_type_id' => 'required',
         'fullname' => 'required|min:3',
         'email' => 'required|email|min:5',
         'password' => 'required|confirmed'
@@ -52,6 +53,7 @@ class UserController extends Controller
     {
         $request->validate($this->rules);
         $user = new User();
+        $user->user_type_id = $request->input('user_type_id');
         $user->fullname = $request->input('fullname');
         $user->email = $request->input('email');
         $user->password = bcrypt($request->input('password'));
@@ -78,7 +80,12 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+        $data = [
+            'user' => $user,
+            'userTypes' => UserType::all(),
+        ];
+        return view('admin.user.edit', $data);
     }
 
     /**
@@ -88,9 +95,16 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update($id)
     {
-        //
+        request()->validate($this->rules);
+        $user = User::find($id);
+        $user->user_type_id = request()->input('user_type_id');
+        $user->fullname = request()->input('fullname');
+        $user->email = request()->input('email');
+        $user->password = bcrypt(request()->input('password'));
+        $user->save();
+        return redirect($this->path);
     }
 
     /**
@@ -101,6 +115,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = \App\User::find($id);
+        $user->delete();
+        return response()->json();
     }
 }

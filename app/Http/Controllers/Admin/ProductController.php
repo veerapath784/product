@@ -4,9 +4,21 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Product;
+use App\Helpers\ImageUpload;
 
 class ProductController extends Controller
 {
+
+
+    protected $rules = [
+        'name' => 'required',
+        'quantity' => 'required',
+        'detail' => 'required|min:5',
+        'price' => 'required'
+    ];
+
+    protected $path = "/admin/product";
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +26,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.product.index', [
+            'products' => Product::all()
+        ]);
     }
 
     /**
@@ -24,7 +38,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.product.create');
     }
 
     /**
@@ -35,7 +49,26 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $imageName = "https://via.placeholder.com/450x580";
+               if (request()->has('thumbnail')) {
+                $imageUpload = new ImageUpload(request()->file('thumbnail'), '/images/img');
+
+                $imageName = $imageUpload->execute();
+               }
+
+        $request->validate($this->rules);
+        $product = new Product();
+        $product->name = $request->input('name');
+        $product->category_id = 1;
+        $product->thumbnail = $imageName;
+
+        $product->quantity = $request->input('quantity');
+        $product->detail = $request->input('detail');
+        $product->price = $request->input('price');
+        $product->save();
+        return redirect($this->path);
+
     }
 
     /**
@@ -80,6 +113,8 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $product = \App\Product::find($id);
+        $product->delete();
+        return response()->json();
     }
 }

@@ -18,6 +18,13 @@
   <!-- Custom styles for this template-->
   <link href="/css/sb-admin-2.min.css" rel="stylesheet">
 
+  <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
+  <style>
+    body{
+      font-family: 'Prompt', sans-serif;
+    }
+  </style>
+
 </head>
 
 <body id="page-top">
@@ -389,7 +396,8 @@
 
   <!-- Custom scripts for all pages-->
   <script src="/js/sb-admin-2.min.js"></script>
-
+  <script src="/js/all.js"></script>
+  @yield('script')
 </body>
 
 </html>
