@@ -16,4 +16,23 @@ Route::get('/', function () {
 });
 
 
+// admin
+
+Route::group(['prefix' => 'admin'], function(){
+    Route::get('/', 'Admin\DashboardController@index');
+
+    // user
+    Route::resource('user', 'Admin\UserController');
+
+    // userType
+    Route::resource('userType', 'Admin\UserTypeController');
+
+    // product
+    Route::resource('product', 'Admin\ProductController');
+
+    // category
+    Route::resource('category', 'CategoryController');
+});
+
+
 Auth::routes();
