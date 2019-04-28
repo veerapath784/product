@@ -4,9 +4,20 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\UserType;
+use App\User;
 
 class UserController extends Controller
 {
+
+    protected $rules = [
+        'fullname' => 'required|min:3',
+        'email' => 'required|email|min:5',
+        'password' => 'required|confirmed'
+    ];
+
+    protected $path = "/admin/user";
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +25,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.user.index', [
+            'users' => User::all()
+        ]);
     }
 
     /**
@@ -24,7 +37,9 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.user.create', [
+            'userTypes' => UserType::all()
+        ]);
     }
 
     /**
@@ -35,7 +50,13 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate($this->rules);
+        $user = new User();
+        $user->fullname = $request->input('fullname');
+        $user->email = $request->input('email');
+        $user->password = bcrypt($request->input('password'));
+        $user->save();
+        return redirect($this->path);
     }
 
     /**
