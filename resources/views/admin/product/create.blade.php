@@ -20,26 +20,29 @@
 
             <form action="/admin/product" method="POST" enctype="multipart/form-data">
                 @csrf
+
                 <div class="form-group">
-                    <label for="selectUserType">เลือกหมวดหมู่</label>
-                    <select class="form-control">
-                    <option>ทดสอบ 1</option>
-                    <option>ทดสอบ 2</option>
-                    <option>ทดสอบ 3</option>
-                    </select>
-                    <div class="form-group mt-3">
-                        <label for="selectUserType">รูปภาพสินค้า</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
-                            </div>
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input" name="thumbnail">
-                                <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                            </div>
+                        <label for="inputClientTypeId">เลือกหมวดหมู่ </label>
+                        <select name="category_id" id="inputClientTypeId" class="form-control">
+                            @foreach($categorys as $category)
+                            <option value="{{$category->id}}">{{$category->name}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                <div class="form-group mt-3">
+                    <label for="selectUserType">รูปภาพสินค้า</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                        </div>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" name="thumbnail">
+                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
                         </div>
                     </div>
                 </div>
+
                 <div class="form-group">
                     <label for="inputFullname">ชื่อ สินค้า</label>
                     <input type="text" class="form-control" name="name" id="inpuName" required placeholder="กรอกชื่อ สินค้า">

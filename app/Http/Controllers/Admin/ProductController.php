@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Product;
 use App\Helpers\ImageUpload;
+use App\Category;
 
 class ProductController extends Controller
 {
@@ -38,7 +39,9 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('admin.product.create');
+        return view('admin.product.create', [
+            'categorys' => Category::all()
+        ]);
     }
 
     /**
@@ -51,16 +54,16 @@ class ProductController extends Controller
     {
 
         $imageName = "https://via.placeholder.com/450x580";
-               if (request()->has('thumbnail')) {
-                $imageUpload = new ImageUpload(request()->file('thumbnail'), '/images/img');
+        if (request()->has('thumbnail')) {
+            $imageUpload = new ImageUpload(request()->file('thumbnail'), '/images/img');
 
-                $imageName = $imageUpload->execute();
-               }
+            $imageName = $imageUpload->execute();
+        }
 
         $request->validate($this->rules);
         $product = new Product();
         $product->name = $request->input('name');
-        $product->category_id = 1;
+        $product->category_id = $request->input('category_id');
         $product->thumbnail = $imageName;
 
         $product->quantity = $request->input('quantity');
@@ -68,7 +71,6 @@ class ProductController extends Controller
         $product->price = $request->input('price');
         $product->save();
         return redirect($this->path);
-
     }
 
     /**

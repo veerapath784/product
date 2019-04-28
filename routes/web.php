@@ -31,7 +31,7 @@ Route::group(['prefix' => 'admin'], function(){
     Route::resource('product', 'Admin\ProductController');
 
     // category
-    Route::resource('category', 'CategoryController');
+    Route::resource('category', 'Admin\CategoryController');
 });
 
 

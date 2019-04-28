@@ -1,43 +1,33 @@
 @extends('admin.layout.master')
 @section('content')
-<h1 class="h3 mb-4 text-gray-800">สินค้า
-    <span class="float-right"><a href="/admin/product/create" class="btn btn-sm btn-success"><i class="fa fa-plus"></i> เพิ่มสินค้า</a></span>
+<h1 class="h3 mb-4 text-gray-800">หมวดหมู่สินค้า
+    <span class="float-right"><a href="/admin/category/create" class="btn btn-sm btn-success"><i class="fa fa-plus"></i> เพิ่มหมวดหมู่สินค้า</a></span>
 </h1>
 
 <div class="card">
     <div class="card-heading">
         <div class="container mt-3">
-            <h4 class="card-title">รายการสินค้า</h4>
+            <h4 class="card-title">รายการหมวดหมู่สินค้า</h4>
         </div>
         <table class="table">
             <thead>
                 <tr>
                     <th>#</th>
-                   <th>รูปสินค้า</th>
-                    <th>ชื่อ สินค้า</th>
-                    <th>หมวดหมู่สินค้า</th>
-                    <th>จำนวน</th>
-                    <th>รายละเอียด</th>
-                    <th>ราคา</th>
+                    <th>ชื่อ หมวดหมู่สินค้า</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
-                @foreach($products as $product)
+                @foreach($categorys as $category)
                 <tr>
-                    <td>{{$product->id}}</td>
-                    <td><img src="{{$product->thumbnail}}" alt="{{$product->name}}" width="200"></td>
-                    <td>{{$product->name}}</td>
-                    <td>{{$product->category->name}}</td>
-                    <td>{{$product->quantity}}</td>
-                    <td>{{$product->detail}}</td>
-                    <td>{{$product->price}}</td>
+                    <td>{{$category->id}}</td>
 
+                    <td>{{$category->name}}</td>
                     <td>
                         <div class="button-group">
-                            <a href="/admin/product/{{$product->id}}/edit" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
+                            <a href="/admin/category/{{$category->id}}/edit" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
 
-                            <a href="javaScript: deleteItem('{{$product->id  }}')" class="btn  btn-danger btn-sm">
+                            <a href="javaScript: deleteItem('{{$category->id  }}')" class="btn  btn-danger btn-sm">
                                     <i class="fa fa-trash"></i>
                                 </a>
                         </div>
@@ -49,6 +39,9 @@
 
 
     </div>
+
+
+
 
 
 @section('script')
@@ -76,6 +69,9 @@
             }
     </script>
 @endsection
+
+
+
 
 
 </div>
