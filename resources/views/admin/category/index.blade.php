@@ -14,36 +14,29 @@
                 <tr>
                     <th>#</th>
                     <th>ชื่อ หมวดหมู่สินค้า</th>
-                    <th></th>
+                    <th>จัดการ</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($categorys as $category)
                 <tr>
                     <td>{{$category->id}}</td>
-
                     <td>{{$category->name}}</td>
                     <td>
                         <div class="button-group">
-                            <a href="/admin/category/{{$category->id}}/edit" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
-
-                            <a href="javaScript: deleteItem('{{$category->id  }}')" class="btn  btn-danger btn-sm">
-                                    <i class="fa fa-trash"></i>
-                                </a>
-                        </div>
-                    </td>
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
-
-
+                                    <a href="/admin/category/{{$category->id}}/edit" class="btn btn-warning btn-sm"><i
+                                            class="fa fa-edit"></i></a>
+                                    <a href="javaScript: deleteItem('{{$category->id  }}')"
+                                        class="btn  btn-danger btn-sm">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
     </div>
-
-
-
-
-
 @section('script')
     <script>
         var deleteItem = function deleteItem(id) {

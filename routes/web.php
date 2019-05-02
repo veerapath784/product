@@ -32,6 +32,9 @@ Route::group(['prefix' => 'admin'], function(){
 
     // category
     Route::resource('category', 'Admin\CategoryController');
+
+    //Banner
+    Route::resource('banner', 'Admin\BannerController');
 });
 
 
