@@ -1,29 +1,38 @@
 @extends('admin.layout.master')
+
+
+
 @section('content')
 <h1 class="h3 mb-4 text-gray-800">หมวดหมู่สินค้า
-    <span class="float-right"><a href="/admin/category/create" class="btn btn-sm btn-success"><i class="fa fa-plus"></i> เพิ่มหมวดหมู่สินค้า</a></span>
+
 </h1>
 
 <div class="card">
     <div class="card-heading">
         <div class="container mt-3">
             <h4 class="card-title">รายการหมวดหมู่สินค้า</h4>
+            <span class="float-right"><a href="/admin/category/create" class="btn btn-sm btn-success"><i class="fa fa-plus"></i>
+                เพิ่มหมวดหมู่สินค้า</a></span>
         </div>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>ชื่อ หมวดหมู่สินค้า</th>
-                    <th>จัดการ</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach($categorys as $category)
-                <tr>
-                    <td>{{$category->id}}</td>
-                    <td>{{$category->name}}</td>
-                    <td>
-                        <div class="button-group">
+
+    </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>ชื่อ หมวดหมู่สินค้า</th>
+                            <th>จัดการ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($categorys as $category)
+                        <tr>
+                            <td>{{$category->id}}</td>
+                            <td>{{$category->name}}</td>
+                            <td>
+                                <div class="button-group">
                                     <a href="/admin/category/{{$category->id}}/edit" class="btn btn-warning btn-sm"><i
                                             class="fa fa-edit"></i></a>
                                     <a href="javaScript: deleteItem('{{$category->id  }}')"
@@ -36,10 +45,12 @@
                         @endforeach
                     </tbody>
                 </table>
-    </div>
+            </div>
+        </div>
+
 @section('script')
-    <script>
-        var deleteItem = function deleteItem(id) {
+        <script>
+            var deleteItem = function deleteItem(id) {
 
                 swal.fire({
                     title: "แน่ใจหรือไม่ ?",
@@ -60,12 +71,17 @@
 
 
             }
-    </script>
+        </script>
+
+</div>
 @endsection
 
 
 
 
 
-</div>
+
+
+
+    </div>
 @endsection

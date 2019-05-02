@@ -107,7 +107,7 @@
           <i class="fas fa-fw fa-cog"></i>
           <span>จัดการระบบ</span>
         </a>
-        <div id="collapsePages" class="collapse show" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">ผู้ใช้งาน</h6>
                 <a class="collapse-item" href="/admin/user">ผู้ใช้งาน</a>
