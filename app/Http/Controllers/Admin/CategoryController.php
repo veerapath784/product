@@ -70,7 +70,11 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $category = Category::find($id);
+        $data = [
+            'category' => $category
+        ];
+        return view('admin.category.edit', $data);
     }
 
     /**
@@ -82,7 +86,11 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate($this->rules);
+        $category = Category::find($id);
+        $category->name = $request->input('name');
+        $category       ->save();
+        return redirect($this->path);
     }
 
     /**
@@ -93,6 +101,8 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $category = \App\Category::find($id);
+        $category->delete();
+        return response()->json();
     }
 }

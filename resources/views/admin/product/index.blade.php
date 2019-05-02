@@ -1,22 +1,20 @@
 @extends('admin.layout.master')
 
-
 @section('content')
 <h1 class="h3 mb-4 text-gray-800">สินค้า
-
 </h1>
-    <div class="card">
-        <div class="card-heading">
-            <div class="container mt-3">
-                <h4 class="card-title">รายการสินค้า</h4>
-                <span class="float-right"><a href="/admin/product/create" class="btn btn-sm btn-success"><i class="fa fa-plus"></i>
+<div class="card shadow ">
+    <div class="card-heading">
+        <div class="container mt-3">
+            <h4 class="card-title">รายการสินค้า</h4>
+            <span class="float-right"><a href="/admin/product/create" class="btn btn-sm btn-success"><i
+                        class="fa fa-plus"></i>
                     เพิ่มสินค้า</a></span>
-            </div>
-
         </div>
+    </div>
     <div class="card-body">
         <div class="table-responsive">
-            <table class="table table-bordered">
+            <table class="table table-bordered ">
                 <tr>
                     <th>#</th>
                     <th>รูปสินค้า</th>
@@ -38,7 +36,6 @@
                         <td>{{$product->quantity}}</td>
                         <td>{{$product->detail}}</td>
                         <td>{{$product->price}}</td>
-
                         <td>
                             <div class="button-group">
                                 <a href="/admin/product/{{$product->id}}/edit" class="btn btn-warning btn-sm"><i
@@ -53,12 +50,7 @@
                     @endforeach
                 </tbody>
             </table>
-
-
-
-
         </div>
-
 
 
 @section('script')
@@ -87,9 +79,5 @@
         </script>
     </div>
 @endsection
-
-
-
-
 </div>
 @endsection

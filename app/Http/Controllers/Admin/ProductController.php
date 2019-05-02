@@ -92,7 +92,16 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+
+        $product = Product::find($id);
+        $data = [
+            'product' => $product
+        ];
+        return view('admin.product.edit', $data, [
+            'categorys' => Category::all()
+        ]);
+
+
     }
 
     /**
@@ -104,7 +113,24 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $imageName = "https://via.placeholder.com/450x580";
+        if (request()->has('thumbnail')) {
+            $imageUpload = new ImageUpload(request()->file('thumbnail'), '/images/img');
+
+            $imageName = $imageUpload->execute();
+        }
+
+        $request->validate($this->rules);
+        $product = Product::find($id);
+        $product->name = $request->input('name');
+        $product->category_id = $request->input('category_id');
+        $product->thumbnail = $imageName;
+
+        $product->quantity = $request->input('quantity');
+        $product->detail = $request->input('detail');
+        $product->price = $request->input('price');
+        $product->save();
+        return redirect($this->path);
     }
 
     /**

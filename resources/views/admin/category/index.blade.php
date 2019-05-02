@@ -7,7 +7,7 @@
 
 </h1>
 
-<div class="card">
+<div class="card shadow ">
     <div class="card-heading">
         <div class="container mt-3">
             <h4 class="card-title">รายการหมวดหมู่สินค้า</h4>
