@@ -116,6 +116,7 @@
             <h6 class="collapse-header">สินค้า</h6>
             <a class="collapse-item" href="/admin/category">หมวดหมู่สินค้า</a>
             <a class="collapse-item" href="/admin/product">สินค้า</a>
+            <a class="collapse-item" href="/admin/banner">banner</a>
 
             <div class="collapse-divider"></div>
             <h6 class="collapse-header">xxxx</h6>
@@ -125,9 +126,9 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="charts.html">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Charts</span></a>
+        <a class="nav-link" href="{{ route('logout') }}">
+          <i class="fas fa-lock"></i>
+          <span>logout</span></a>
       </li>
 
       <!-- Nav Item - Tables -->
@@ -364,7 +365,7 @@
   </div>
   <!-- End of Page Wrapper -->
 
-  <!-- Scroll to Top Button-->
+  <!--     Scroll to Top Button-->
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>

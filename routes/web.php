@@ -18,7 +18,7 @@ Route::get('/', function () {
 
 // admin
 
-Route::group(['prefix' => 'admin'], function(){
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
     Route::get('/', 'Admin\DashboardController@index');
 
     // user
@@ -39,3 +39,8 @@ Route::group(['prefix' => 'admin'], function(){
 
 
 Auth::routes();
+
+Route::get('logout', function(){
+    auth()->logout();
+    return redirect('/');
+});
