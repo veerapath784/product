@@ -32,20 +32,20 @@
                             <label><i class="fa fa-image"></i> รูป Banner</label>
 
                             <div class="form-group">
-                                <input name=" url" type="file">
+                                <input name="thumbnail" type="file">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <div class="form-group">
                                 <label>วัน - เวลาเริ่มต้น : <span class="text-danger">*</span></label>
-                                <input class="form-control" readonly="1" id="start" name="start" type="text"
-                                    value="2019-05-01 13:41:50">
+                                <input class="form-control"  id="start" name="start" type="date"
+                                    >
                             </div>
                             <div class="form-group">
                                 <label>วัน - เวลาสิ้นสุด <span class="text-danger">*</span></label>
-                                <input class="form-control" readonly="1" id="end" name="end" type="text"
-                                    value="2019-05-01 13:41:50">
+                                <input class="form-control"  id="end" name="end" type="date"
+                                    >
                             </div>
                             <div class="form-group">
                                 <label>ลิงค์ (ไปยังหน้าเว็บ) <span class="pull-right">&nbsp;</span></label>
@@ -63,36 +63,5 @@
                     <button class="btn btn-success" id="btnsmt" type="submit">บันทึก</button>
                 </div>
 
-
-@section('script')
-                <script>
-                    $('#start').datetimepicker({
-                format: 'Y-m-d H:i:s',
-                lang: 'th',
-                step: 30,
-                onShow: function (ct) {
-                    this.setOptions({
-                        minDate: '{!! \Carbon\Carbon::now() !!}'
-                        /* maxDate: $('#end_time').val() ? $('#end_time').val() : false*/
-                    });
-                },
-                timepicker: true
-            });
-
-            $('#end').datetimepicker({
-                format: 'Y-m-d H:i:s',
-                lang: 'th',
-                step: 30,
-                onShow: function (ct) {
-                    this.setOptions({
-                        minDate: $('#start').val() ? $('#start').val() : false
-                    });
-                },
-                timepicker: true
-            });
-
-
-                </script>
-@endsection
 
 @endsection

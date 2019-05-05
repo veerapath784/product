@@ -4,9 +4,17 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\UserType;
 
 class UserTypeController extends Controller
 {
+
+
+    protected $rules = [
+        'name' => 'required',
+
+    ];
+    protected $path = "/admin/user_type";
     /**
      * Display a listing of the resource.
      *
@@ -24,7 +32,7 @@ class UserTypeController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.user_type.create');
     }
 
     /**
@@ -35,7 +43,11 @@ class UserTypeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate($this->rules);
+        $category = new UserType();
+        $category->name = $request->input('name');
+        $category       ->save();
+        return redirect($this->path);
     }
 
     /**

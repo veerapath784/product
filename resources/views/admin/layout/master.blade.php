@@ -17,6 +17,7 @@
 
   <!-- Custom styles for this template-->
   <link href="/css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="/js/jquery.datetimepicker.css" type="text/css">
 
   <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
   <style>
@@ -388,13 +389,15 @@
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="/vendor/jquery/jquery.min.js"></script>
+  <script src="/vendor/jquery/jquery.min.js"></script> 
+  <!-- Custom scripts for all pages-->
+  <script src="/js/jquery.datetimepicker.full.min.js"></script>
   <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
   <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- Custom scripts for all pages-->
+ 
   <script src="/js/sb-admin-2.min.js"></script>
   <script src="/js/all.js"></script>
   @yield('script')

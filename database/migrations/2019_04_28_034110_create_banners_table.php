@@ -16,7 +16,7 @@ class CreateBannersTable extends Migration
         Schema::create('banners', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('user_id')->comment('ใครเป็นคนแอ๊ด');
-            $table->string('url')->comment('ที่อยู่รูป');
+            $table->string('thumbnail')->comment('ที่อยู่รูป');
             $table->string('title')->comment('หัวข้อ');
             $table->string('link')->comment('ลิงค์');
             $table->string('start')->comment('เริ่มเมื่อไหร่');

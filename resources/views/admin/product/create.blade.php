@@ -31,17 +31,12 @@
                     </div>
 
                 <div class="form-group mt-3">
-                    <label for="selectUserType">รูปภาพสินค้า</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
-                        </div>
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" name="thumbnail">
-                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                        </div>
+                   <div class="form-group">
+                       <label>เลือกไฟล์</label>
+                       <input type="file" name="thumbnail" />
+                   </div>
                     </div>
-                </div>
+               
 
                 <div class="form-group">
                     <label for="inputFullname">ชื่อ สินค้า</label>
