@@ -16,27 +16,27 @@
         <div class="table-responsive">
             <table class="table table-bordered ">
                 <tr>
-                    <th>#</th>
-                    <th>รูปสินค้า</th>
-                    <th>ชื่อ สินค้า</th>
-                    <th>หมวดหมู่สินค้า</th>
-                    <th>จำนวน</th>
-                    <th width="300">รายละเอียด</th>
-                    <th>ราคา</th>
-                    <th>จัดการ</th>
+                    <th  class="text-center">#</th>
+                    <th  class="text-center">รูปสินค้า</th>
+                    <th  class="text-center">ชื่อ สินค้า</th>
+                    <th  class="text-center">หมวดหมู่สินค้า</th>
+                    <th  class="text-center">จำนวน</th>
+                    <th  class="text-center" width="500">รายละเอียด</th>
+                    <th  class="text-center">ราคา</th>
+                    <th  class="text-center">จัดการ</th>
                 </tr>
                 </thead>
                 <tbody>
                     @foreach($products as $product)
                     <tr>
-                        <td>{{$product->id}}</td>
-                        <td><img src="{{$product->thumbnail}}" alt="{{$product->name}}" width="200"></td>
-                        <td>{{$product->name}}</td>
-                        <td>{{$product->category->name}}</td>
-                        <td>{{$product->quantity}}</td>
+                        <td class="text-center">{{$product->id}}</td>
+                        <td class="text-center"><img src="{{$product->thumbnail}}" alt="{{$product->name}}"></td>
+                        <td class="text-center">{{$product->name}}</td>
+                        <td class="text-center">{{$product->category->name}}</td>
+                        <td class="text-center">{{$product->quantity}}</td>
                         <td>{{$product->detail}}</td>
-                        <td>{{$product->price}}</td>
-                        <td>
+                        <td class="text-center">{{$product->price}}</td>
+                        <td class="text-center">
                             <div class="button-group">
                                 <a href="/admin/product/{{$product->id}}/edit" class="btn btn-warning btn-sm"><i
                                         class="fa fa-edit"></i></a>

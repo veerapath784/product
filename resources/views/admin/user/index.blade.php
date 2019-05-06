@@ -16,6 +16,8 @@
                     <th>ประเภทผู้ใช้งาน</th>
                     <th>ชื่อ - สกุล</th>
                     <th>อีเมล์</th>
+                    <th>เบอร์ติดต่อ</th>
+                    <th>ที่อยู่</th>
                     <th>จัดการ</th>
                 </tr>
             </thead>
@@ -23,9 +25,11 @@
                 @foreach($users as $user)
                 <tr>
                     <td>{{$user->id}}</td>
-                    <td>{{$user->userType->name}}</td>
+                    <td>{{$user->user_type_id}}</td>
                     <td>{{$user->fullname}}</td>
                     <td>{{$user->email}}</td>
+                    <td>{{$user->phone}}</td>
+                    <td>{{$user->address}}</td>
                     <td>
                         <div class="button-group">
                             <a href="/admin/user/{{$user->id}}/edit" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>

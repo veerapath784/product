@@ -35,10 +35,10 @@
                                 <div class="button-group">
                                     <a href="/admin/category/{{$category->id}}/edit" class="btn btn-warning btn-sm"><i
                                             class="fa fa-edit"></i></a>
-                                    <a href="javaScript: deleteItem('{{$category->id  }}')"
-                                        class="btn  btn-danger btn-sm">
-                                        <i class="fa fa-trash"></i>
-                                    </a>
+                                    
+                            <a href="javaScript: deleteItem('{{$category->id  }}')" class="btn  btn-danger btn-sm">
+                                    <i class="fa fa-trash"></i>
+                                </a>
                                 </div>
                             </td>
                         </tr>
@@ -49,8 +49,8 @@
         </div>
 
 @section('script')
-        <script>
-            var deleteItem = function deleteItem(id) {
+        <<script>
+        var deleteItem = function deleteItem(id) {
 
                 swal.fire({
                     title: "แน่ใจหรือไม่ ?",
@@ -59,8 +59,8 @@
                     showCancelButton: true,
                 }).then(function (result) {
                     if (result.value) {
-                        axios.delete('/admin/product/' + id).then(function (response) {
-                            window.location.href = "/admin/product/";
+                        axios.delete('/admin/category/' + id).then(function (response) {
+                            window.location.href = "/admin/category/";
                         }).catch(function (error) {
                             console.log(error.response)
                             swal('เกิดข้อผิดพลาด', 'ไม่สามารถลบข้อมูลได้ \n ' + error.response.statusText,
@@ -71,7 +71,7 @@
 
 
             }
-        </script>
+    </script>
 
 </div>
 @endsection
