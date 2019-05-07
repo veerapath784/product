@@ -14,10 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/test', function () {
-    return view('testlogin');
+Route::get('/homepage', function () {
+    return view('homepage');
 });
+
 
 // admin
 

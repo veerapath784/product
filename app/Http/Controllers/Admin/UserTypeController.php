@@ -22,7 +22,9 @@ class UserTypeController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.user_type.index', [
+            'usertypes' => UserType::all()
+        ]);
     }
 
     /**

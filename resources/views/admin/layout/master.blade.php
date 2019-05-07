@@ -179,10 +179,10 @@
                   Alerts Center
                 </h6>
                 <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="mr-3">
-                    <div class="icon-circle bg-warning">
-                      <i class="fas fa-file-alt text-white"></i>
-                    </div>
+                  <{{ Auth::user()->fullname }}div class="mr-3">
+                   {{ Auth::user()->fullname }} <div class="icon-circle bg-warning">
+                   {{ Auth::user()->fullname }}   <i class="fas fa-file-alt text-white"></i>
+                   {{ Auth::user()->fullname }} </div>
                   </div>
                   <div>
                     <div class="small text-gray-500">December 12, 2019</div>
