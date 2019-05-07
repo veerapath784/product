@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="bg-gradient-warning">
 
   <div class="container">
 
@@ -49,32 +49,39 @@
                   <div class="col-sm-6 mb-3 mb-sm-0">
                     <input type="text" class="form-control form-control-user" name="fullname" id="exampleFirstName" placeholder="Full Name">
                   </div>
+
                 <div class="form-group">
                   <input  name="email" type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email Address">
                 </div>
+
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
                     <input name="password" type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
                   </div>
-                  <div class="col-sm-6">
+
+                  <div class="col-sm-6 mb-3 mb-sm-0">
                     <input name="password_confirmation" type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password">
                   </div>
                 </div>
+
                 <div class="col-sm-6 mb-3 mb-sm-0">
                     <input type="text" class="form-control form-control-user" name="address"  placeholder="address">
                   </div>
+                  
                   <div class="col-sm-6 mb-3 mb-sm-0">
                     <input type="text" class="form-control form-control-user" name="phone"  placeholder="phone">
                   </div>
                
-                <button type="submit" class="btn btn-primary btn-user btn-block mt-3"><i class="fa fa-plus"></i> เพิ่มผู้ใช้งาน</button>
+                <button type="submit" class="btn btn-warning btn-user btn-block mt-3"><i class="fa fa-plus"></i> เพิ่มผู้ใช้งาน</button>
               </form>
               <hr>
-              <div class="text-center">
+              <div class="text-center mr-3">
                 <a class="small" href="forgot-password.html">Forgot Password?</a>
               </div>
               <div class="text-center">
-                <a class="small" href="login.html">Already have an account? Login!</a>
+                <a class="small" href="{{ route('login') }}">Already have an account? Login!</a>
+                <br><br><br><br><br><br>
+
               </div>
             </div>
           </div>

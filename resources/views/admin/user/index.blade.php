@@ -1,56 +1,58 @@
 @extends('admin.layout.master')
+
 @section('content')
-<h1 class="h3 mb-4 text-gray-800">ผู้ใช้งาน
-    <span class="float-right"><a href="/admin/user/create" class="btn btn-sm btn-success"><i class="fa fa-plus"></i> เพิ่มผู้ใช้งาน</a></span>
+<h1 class="h3 mb-4 text-gray-800">ผู้ใช้
 </h1>
-
-<div class="card">
+<div class="card shadow ">
     <div class="card-heading">
-        <div class="container mt-3">
-            <h4 class="card-title">รายการผู้ใช้งาน</h4>
+        <div class="container mt-5">
+            <h4 class="card-title">รายการผู้ใช้</h4>
+            <span class="float-right"><a href="/admin/user/create" class="btn btn-sm btn-success"><i
+                        class="fa fa-plus"></i>
+                    เพิ่มผู้ใช้</a></span>
         </div>
-        <table class="table">
-            <thead>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered ">
+                <thead>
                 <tr>
-                    <th>#</th>
-                    <th>ประเภทผู้ใช้งาน</th>
-                    <th>ชื่อ - สกุล</th>
-                    <th>อีเมล์</th>
-                    <th>เบอร์ติดต่อ</th>
-                    <th>ที่อยู่</th>
-                    <th>จัดการ</th>
+                    <th  class="text-center">#</th>
+                    <th  class="text-center">ชื่อ</th>
+                    <th  class="text-center">อีเมล</th>
+                    <th  class="text-center" width="500">ที่อยู่</th>
+                    <th  class="text-center">เบอร์โทร</th>
+                    <th  class="text-center">จัดการ</th>
                 </tr>
-            </thead>
-            <tbody>
-                @foreach($users as $user)
-                <tr>
-                    <td>{{$user->id}}</td>
-                    <td>{{$user->user_type_id}}</td>
-                    <td>{{$user->fullname}}</td>
-                    <td>{{$user->email}}</td>
-                    <td>{{$user->phone}}</td>
-                    <td>{{$user->address}}</td>
-                    <td>
-                        <div class="button-group">
-                            <a href="/admin/user/{{$user->id}}/edit" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
+                </thead>
+                <tbody>
+                    @foreach($users as $user)
+                    <tr>
+                        <td class="text-center">{{$user->id}}</td>
+                        <td class="text-center">{{$user->fullname}}</td>
+                        <td class="text-center">{{$user->email}}</td>
+                        <td>{{$user->address}}</td>
+                        <td class="text-center">{{$user->phone}}</td>
+                        <td class="text-center">
+                            <div class="button-group">
+                                <a href="/admin/user/{{$user->id}}/edit" class="btn btn-warning btn-sm"><i
+                                        class="fa fa-edit"></i></a>
 
-                            <a href="javaScript: deleteItem('{{$user->id  }}')" class="btn  btn-danger btn-sm">
+                                <a href="javaScript: deleteItem('{{$user->id  }}')" class="btn  btn-danger btn-sm">
                                     <i class="fa fa-trash"></i>
                                 </a>
-                        </div>
-                    </td>
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
-
-
-    </div>
+                            </div>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
 
 
 @section('script')
-    <script>
-        var deleteItem = function deleteItem(id) {
+        <script>
+            var deleteItem = function deleteItem(id) {
 
                 swal.fire({
                     title: "แน่ใจหรือไม่ ?",
@@ -71,9 +73,8 @@
 
 
             }
-    </script>
+        </script>
+    </div>
 @endsection
-
-
 </div>
 @endsection

@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="bg-gradient-warning">
 
   <div class="container">
 
@@ -33,8 +33,8 @@
           <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
             <div class="row">
-              <div class="col-lg-6 d-none d-lg-block ">
-                <img src="/images/keys.png" class="img-fluid">
+              <div class="col-lg-6 d-none d-lg-block bg-login-image">
+                <!-- <img src="/images/keys.png" class="img-fluid"> -->
               </div>
               <div class="col-lg-6">
                 <div class="p-5">
@@ -65,7 +65,7 @@
                       </div>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary btn-user btn-block">Login</button>
+                    <button type="submit" class="btn btn-warning btn-user btn-block">Login</button>
                     
                   </form>
                   <hr>
@@ -73,7 +73,8 @@
                     <a class="small" href="forgot-password.html">Forgot Password?</a>
                   </div>
                   <div class="text-center">
-                    <a class="small" href="register.html">Create an Account!</a>
+                    <a class="small" href="{{ route('register') }}">Create an Account!</a>
+                    <br><br><br><br><br><br>
                   </div>
                 </div>
               </div>
@@ -86,6 +87,7 @@
     </div>
 
   </div>
+  
 
   <!-- Bootstrap core JavaScript-->
   <script src="/vendor/jquery/jquery.min.js"></script>

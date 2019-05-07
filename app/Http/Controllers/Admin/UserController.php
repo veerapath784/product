@@ -14,7 +14,9 @@ class UserController extends Controller
         'user_type_id' => 'required',
         'fullname' => 'required|min:3',
         'email' => 'required|email|min:5',
-        'password' => 'required|confirmed'
+        'password' => 'required|confirmed',
+        'address' => 'required|min:5',
+        'phone' => 'required|min:5',
     ];
 
     protected $path = "/admin/user";
@@ -57,6 +59,8 @@ class UserController extends Controller
         $user->fullname = $request->input('fullname');
         $user->email = $request->input('email');
         $user->password = bcrypt($request->input('password'));
+        $user->address = $request->input('address');
+        $user->phone = $request->input('phone');
         $user->save();
         return redirect($this->path);
     }
@@ -103,6 +107,8 @@ class UserController extends Controller
         $user->fullname = request()->input('fullname');
         $user->email = request()->input('email');
         $user->password = bcrypt(request()->input('password'));
+        $user->address = $request->input('address');
+        $user->phone = $request->input('phone');
         $user->save();
         return redirect($this->path);
     }

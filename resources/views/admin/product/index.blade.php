@@ -5,7 +5,7 @@
 </h1>
 <div class="card shadow ">
     <div class="card-heading">
-        <div class="container mt-3">
+        <div class="container mt-5">
             <h4 class="card-title">รายการสินค้า</h4>
             <span class="float-right"><a href="/admin/product/create" class="btn btn-sm btn-success"><i
                         class="fa fa-plus"></i>
@@ -15,6 +15,7 @@
     <div class="card-body">
         <div class="table-responsive">
             <table class="table table-bordered ">
+                <thead>
                 <tr>
                     <th  class="text-center">#</th>
                     <th  class="text-center">รูปสินค้า</th>
