@@ -14,7 +14,7 @@ class UserTypeController extends Controller
         'name' => 'required',
 
     ];
-    protected $path = "/admin/user_type";
+    protected $path = "/admin/userType";
     /**
      * Display a listing of the resource.
      *
@@ -94,6 +94,8 @@ class UserTypeController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $product = \App\UserType::find($id);
+        $product->delete();
+        return response()->json();
     }
 }

@@ -9,7 +9,7 @@
             <h4 class="card-title">รายการสินค้า</h4>
             <span class="float-right"><a href="/admin/banner/create" class="btn btn-sm btn-success"><i
                         class="fa fa-plus"></i>
-                    เพิ่มสินค้า</a></span>
+                    เพิ่มBanner</a></span>
         </div>
     </div>
     <div class="card-body">

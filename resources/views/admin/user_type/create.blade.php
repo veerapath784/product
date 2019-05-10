@@ -16,9 +16,9 @@
             </div>
             @endif
 
-            <form action="/admin/user_type" method="POST">
+            <form action="/admin/userType" method="POST">
                 @csrf
-               
+
                 <div class="form-group">
                     <label for="inputFullname">ชื่อ - สกุล</label>
                     <input type="text" class="form-control" name="name" id="inpuFullname" required placeholder="กรอกชื่อสิทธิ์ การเข้าถึง">

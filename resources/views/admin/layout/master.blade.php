@@ -47,19 +47,9 @@
       <!-- Divider -->
       <hr class="sidebar-divider my-0">
 
-      
+
       <!-- Divider -->
       <hr class="sidebar-divider">
-
-      
-
-     
-      
-     
-
-    
-      
-      
       <div class="sidebar-brand-text mx-3 color">
           <i class="fas fa-fw fa-cog"></i>
           <span>จัดการระบบ</span>
@@ -78,7 +68,7 @@
       </li>
 
        <hr class="sidebar-divider">
-       
+
       <div class="sidebar-brand-text mx-3">
           <i class="fas fa-fw fa-cog"></i>
           <span>จัดการสินค้า</span>
@@ -179,10 +169,7 @@
                   Alerts Center
                 </h6>
                 <a class="dropdown-item d-flex align-items-center" href="#">
-                  <{{ Auth::user()->fullname }}div class="mr-3">
-                   {{ Auth::user()->fullname }} <div class="icon-circle bg-warning">
-                   {{ Auth::user()->fullname }}   <i class="fas fa-file-alt text-white"></i>
-                   {{ Auth::user()->fullname }} </div>
+                  {{ Auth::user()->fullname }}<div class="mr-3">
                   </div>
                   <div>
                     <div class="small text-gray-500">December 12, 2019</div>
@@ -215,7 +202,7 @@
               </div>
             </li>
 
-           
+
             <div class="topbar-divider d-none d-sm-block"></div>
 
             <!-- Nav Item - User Information -->
@@ -261,7 +248,7 @@
 
       </div>
       <!-- End of Main Content -->
-<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
@@ -285,7 +272,7 @@
 
 
   <!-- Bootstrap core JavaScript-->
-  <script src="/vendor/jquery/jquery.min.js"></script> 
+  <script src="/vendor/jquery/jquery.min.js"></script>
   <!-- Custom scripts for all pages-->
   <script src="/js/jquery.datetimepicker.full.min.js"></script>
   <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -293,7 +280,7 @@
   <!-- Core plugin JavaScript-->
   <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
 
- 
+
   <script src="/js/sb-admin-2.min.js"></script>
   <script src="/js/all.js"></script>
   @yield('script')
