@@ -24,8 +24,8 @@ class ArticleController extends Controller
     public function index()
     {
         return view('admin.article.index', [
-            'articles' => Article::all()
-        ]);
+            'articles' => Article::orderBy('id','desc')->get()
+            ]);
     }
 
     /**

@@ -11,8 +11,8 @@
     <div class="card-heading">
         <div class="container mt-3">
             <h4 class="card-title">รายการสิทธิ์ การเข้าถึง</h4>
-            <span class="float-right"><a href="/admin/userType/create" class="btn btn-sm btn-success"><i class="fa fa-plus"></i>
-                เพิ่มสิทธิ์ การเข้าถึง</a></span>
+            {{-- <span class="float-right"><a href="/admin/userType/create" class="btn btn-sm btn-success"><i class="fa fa-plus"></i>
+                เพิ่มสิทธิ์ การเข้าถึง</a></span> --}}
         </div>
 
     </div>
@@ -23,7 +23,7 @@
                         <tr>
                             <th>#</th>
                             <th>ชื่อ สิทธิ์ การเข้าถึง</th>
-                            <th>จัดการ</th>
+                            {{-- <th>จัดการ</th> --}}
                         </tr>
                     </thead>
                     <tbody>
@@ -31,7 +31,7 @@
                         <tr>
                             <td>{{$usertype->id}}</td>
                             <td>{{$usertype->name}}</td>
-                            <td>
+                            {{-- <td>
                                 <div class="button-group">
                                     <a href="/admin/usertype/{{$usertype->id}}/edit" class="btn btn-warning btn-sm"><i
                                             class="fa fa-edit"></i></a>
@@ -40,7 +40,7 @@
                                     <i class="fa fa-trash"></i>
                                 </a>
                                 </div>
-                            </td>
+                            </td> --}}
                         </tr>
                         @endforeach
                     </tbody>

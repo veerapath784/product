@@ -20,32 +20,32 @@
                 </ul>
             </div>
             @endif
-            <form action="/admin/article" method="POST" enctype="multipart/form-data">
+            <form action="/admin/article/{{$article->id}}" method="POST" enctype="multipart/form-data">
+                @method('patch')
                 @csrf
                 <div class="form-group">
                     <label for="inputClientTypeId">เลือกหมวดหมู่ </label>
                     <select name="category_id" id="inputClientTypeId" class="form-control">
                         @foreach($categorys as $category)
-                        <option value="{{$category->id}}">{{$category->name}}</option>
+                        <option @if($category->id == $article->category_id) selected @endif value="{{$category->id}}">{{$category->name}}</option>
                         @endforeach
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="inputFullname">ชื่อเรื่อง ข่าว</label>
-                    <input type="text" class="form-control" name="title"  required placeholder="">
+                    <input  value="{{$article->title}}" type="text" class="form-control" name="title"  required placeholder="">
                 </div>
 
                 <div class="tab-content">
                     <div class="tab-pane active" id="th">
                         <div class="form-group">
                             <label><i class="fa fa-image"></i> รูปภาพ ข่าว</label>
-
                             <div class="form-group">
                                 <input name="thumbnail" type="file">
                             </div>
                         </div>
 
-                        <textarea id="summernote" name="detail" ></textarea>
+                    <textarea id="summernote" name="detail"  >{{$article->detail}}</textarea>
                         <div class="mt-3">
                         <button class="btn btn-success" id="btnsmt" type="submit">บันทึก</button>
                     </div>
@@ -54,11 +54,8 @@
 <script>
 $(document).ready(function() {
     $('#summernote').summernote({
-        placeholder: 'Hello bootstrap 4',
-        tabsize: 2,
-        height: 100
+
       });
   });
-
 </script>
 @endsection

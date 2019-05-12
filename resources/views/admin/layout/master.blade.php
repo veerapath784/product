@@ -89,7 +89,7 @@
       <li class="nav-item">
         <a class="nav-link" href="/admin/banner">
           <i class="fas fa-fw fa-bullhorn"></i>
-          <span>banner</span></a>
+          <span>การโปรโมท</span></a>
       </li>
 
 
@@ -158,14 +158,12 @@
               </div>
             </li>
             <div class="topbar-divider d-none d-sm-block"></div>
+
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
-              <a class="nav-link" href="/admin" >
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small"> <i class="fas fa-fw fa-user"></i> {{ Auth::user()->fullname }}</span>
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small"> <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>{{ Auth::user()->fullname }}</span>
               </a>
-
-            </li>
-
           </ul>
 
         </nav>

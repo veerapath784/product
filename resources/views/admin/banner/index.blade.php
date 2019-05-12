@@ -1,15 +1,15 @@
 @extends('admin.layout.master')
 
 @section('content')
-<h1 class="h3 mb-4 text-gray-800">สินค้า
+<h1 class="h3 mb-4 text-gray-800">โปรโมท
 </h1>
 <div class="card shadow ">
     <div class="card-heading">
         <div class="container mt-3">
-            <h4 class="card-title">รายการสินค้า</h4>
+            <h4 class="card-title">รายการโปรโมท</h4>
             <span class="float-right"><a href="/admin/banner/create" class="btn btn-sm btn-success"><i
                         class="fa fa-plus"></i>
-                    เพิ่มBanner</a></span>
+                    เพิ่ม การโปรโมท</a></span>
         </div>
     </div>
     <div class="card-body">
@@ -17,10 +17,10 @@
             <table class="table table-bordered ">
                 <tr  class="text-center">
                     <th>#</th>
-                    <th >banner_image</th>
-                    <th>name_banner</th>
-                    <th width="120">time_start</th>
-                    <th width="120">time_end</th>
+                    <th >รูปภาพโปรโมท</th>
+                    <th>หัวข้อโปรโมท</th>
+                    <th width="120">วันที่เริ่มการโปรโมท</th>
+                    <th width="120">วันที่สิ้นสุดการโปรโมท</th>
 
                     <th width="100">จัดการ</th>
                 </tr>

@@ -19,6 +19,7 @@
                     <th>#</th>
                     <th>หมวดหมู่</th>
                     <th>หัวข้อข่าว</th>
+                    {{-- <th>รายละเอียดข่าว</th> --}}
                     <th width="100">จัดการ</th>
                 </tr>
                 </thead>
@@ -28,6 +29,7 @@
                         <td>{{$article->id}}</td>
                         <td>{{$article->title}}</td>
                         <td>{{$article->category->name}}</td>
+                        {{-- <td>{!!$article->detail!!}</td> --}}
                         <td >
                             <div class="button-group">
                                 <a href="/admin/article/{{$article->id}}/edit" class="btn btn-warning btn-sm"><i
