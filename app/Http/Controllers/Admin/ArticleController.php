@@ -5,22 +5,16 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Helpers\ImageUpload;
-use App\Banner;
-use App\UserType;
+use App\Article;
 
-class BannerController extends Controller
+class ArticleController extends Controller
 {
 
     protected $rules = [
         'title' => 'required',
         'thumbnail' => 'required|file',
-        'start' => 'required|min:5',
-        'end' => 'required',
-        'start' => 'required',
-        'link' => 'required'
     ];
-    protected $path = "/admin/banner";
-
+    protected $path = "/admin/article";
     /**
      * Display a listing of the resource.
      *
@@ -28,9 +22,7 @@ class BannerController extends Controller
      */
     public function index()
     {
-        return view('admin.banner.index', [
-            'banners' => Banner::orderBy('id','desc')->get()
-        ]);
+        return view('admin.article.index');
     }
 
     /**
@@ -40,9 +32,7 @@ class BannerController extends Controller
      */
     public function create()
     {
-        return view('admin.banner.create', [
-            'user_type_id' => UserType::all()
-        ]);
+        return view('admin.article.create');
     }
 
     /**
@@ -55,25 +45,22 @@ class BannerController extends Controller
     {
         $imageName = "https://via.placeholder.com/450x580";
         if (request()->has('thumbnail')) {
-            $imageUpload = new ImageUpload(request()->file('thumbnail'), '/images/banner');
+            $imageUpload = new ImageUpload(request()->file('thumbnail'), '/images/article');
             $imageUpload->width = 255;
             $imageUpload->upload();
             $imageUpload->resize('aspect');
             $imageName = $imageUpload->save();
+
+            $request->validate($this->rules);
+            $article = new Article();
+            $article->title = $request->input('title');
+            $article->thumbnail = $imageName;
+            $article->user_id = auth()->user()->id ;
+            $article->detail = $request->input('detail');
+            $article-> save();
+            return redirect($this->path);
         }
-
-        $request->validate($this->rules);
-        $banner = new Banner();
-        $banner->title = $request->input('title');
-        $banner->thumbnail = $imageName;
-        $banner->user_id = auth()->user()->id ;
-        $banner->start = $request->input('start');
-        $banner->end = $request->input('end');
-        $banner->link = $request->input('link');
-        $banner->save();
-        return redirect($this->path);
     }
-
 
     /**
      * Display the specified resource.
@@ -95,11 +82,11 @@ class BannerController extends Controller
     public function edit($id)
     {
 
-        $banner = Banner::find($id);
+        $article = Article::find($id);
         $data = [
-            'banner' => $banner
+            'article' => $article
         ];
-        return view('admin.banner.edit', $data);
+        return view('admin.article.edit', $data);
     }
 
     /**
@@ -113,24 +100,20 @@ class BannerController extends Controller
     {
         $imageName = "https://via.placeholder.com/450x580";
         if (request()->has('thumbnail')) {
-            $imageUpload = new ImageUpload(request()->file('thumbnail'), '/images/banner');
+            $imageUpload = new ImageUpload(request()->file('thumbnail'), '/images/article');
             $imageUpload->width = 255;
             $imageUpload->upload();
             $imageUpload->resize('aspect');
             $imageName = $imageUpload->save();
         }
-
-
-        $request->validate($this->rules);
-        $banner = Banner::find($id);
-        $banner->title = $request->input('title');
-        $banner->thumbnail = $imageName;
-        $banner->user_id = auth()->user()->id ;
-        $banner->start = $request->input('start');
-        $banner->end = $request->input('end');
-        $banner->link = $request->input('link');
-        $banner->save();
-        return redirect($this->path);
+            $request->validate($this->rules);
+            $article =  Article::find($id);
+            $article->title = $request->input('title');
+            $article->thumbnail = $imageName;
+            $article->user_id = auth()->user()->id ;
+            $article->detail = $request->input('detail');
+            $article-> save();
+            return redirect($this->path);
     }
 
     /**

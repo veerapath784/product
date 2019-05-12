@@ -1,0 +1,54 @@
+@extends('admin.layout.master')
+
+@section('content')
+
+
+<h1 class="h3 mb-4 text-gray-800">ข่าว</h1>
+<div class="card">
+    <div class="card-heading">
+        <div class="container mt-3">
+            <h4 class="card-title">เพื่มรายการ ข่าว</h4>
+        </div>
+        <div class="card-body">
+
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
+            <form action="/admin/article" method="POST" enctype="multipart/form-data">
+                @method('patch')
+                @csrf
+                <div class="form-group">
+                    <label for="inputFullname">ชื่อเรื่อง ข่าว</label>
+                    <input type="text" class="form-control" name="title"  required placeholder="">
+                </div>
+
+                <div class="tab-content">
+                    <div class="tab-pane active" id="th">
+                        <div class="form-group">
+                            <label><i class="fa fa-image"></i> รูปภาพ ข่าว</label>
+
+                            <div class="form-group">
+                                <input name="thumbnail" type="file">
+                            </div>
+                        </div>
+
+                        <textarea id="summernote" name="detail" ></textarea>
+                        <div class="mt-3">
+                        <button class="btn btn-success" id="btnsmt" type="submit">บันทึก</button>
+                    </div>
+        @endsection
+@section('script')
+<script>
+$(document).ready(function() {
+    $('#summernote').summernote({
+
+      });
+  });
+</script>
+@endsection

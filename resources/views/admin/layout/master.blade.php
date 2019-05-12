@@ -20,6 +20,8 @@
   <link href="/js/jquery.datetimepicker.css" type="text/css">
 
   <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.css" rel="stylesheet">
+
   <style>
     body{
       font-family: 'Prompt', sans-serif;
@@ -215,6 +217,7 @@
   <script src="/js/sb-admin-2.min.js"></script>
   <script src="/js/all.js"></script>
   @yield('script')
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.js"></script>
 </body>
 
 </html>
