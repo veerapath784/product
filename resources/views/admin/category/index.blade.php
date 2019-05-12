@@ -3,16 +3,16 @@
 
 
 @section('content')
-<h1 class="h3 mb-4 text-gray-800">หมวดหมู่สินค้า
+<h1 class="h3 mb-4 text-gray-800">หมวดหมู่ข่าวสาร
 
 </h1>
 
 <div class="card shadow ">
     <div class="card-heading">
         <div class="container mt-3">
-            <h4 class="card-title">รายการหมวดหมู่สินค้า</h4>
+            <h4 class="card-title">รายการหมวดหมู่ข่าวสาร</h4>
             <span class="float-right"><a href="/admin/category/create" class="btn btn-sm btn-success"><i class="fa fa-plus"></i>
-                เพิ่มหมวดหมู่สินค้า</a></span>
+                เพิ่มหมวดหมู่ข่าวสาร</a></span>
         </div>
 
     </div>
@@ -22,7 +22,7 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>ชื่อ หมวดหมู่สินค้า</th>
+                            <th>ชื่อ หมวดหมู่ข่าวสาร</th>
                             <th>จัดการ</th>
                         </tr>
                     </thead>
@@ -35,7 +35,7 @@
                                 <div class="button-group">
                                     <a href="/admin/category/{{$category->id}}/edit" class="btn btn-warning btn-sm"><i
                                             class="fa fa-edit"></i></a>
-                                    
+
                             <a href="javaScript: deleteItem('{{$category->id  }}')" class="btn  btn-danger btn-sm">
                                     <i class="fa fa-trash"></i>
                                 </a>

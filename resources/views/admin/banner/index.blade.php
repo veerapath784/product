@@ -17,23 +17,22 @@
             <table class="table table-bordered ">
                 <tr  class="text-center">
                     <th>#</th>
-                    <th>banner_name</th>
-                    <th>images_banner</th>
-                    <th>time_start</th>
-                    <th>time_end</th>
-                    <th>link</th>
+                    <th >banner_image</th>
+                    <th>name_banner</th>
+                    <th width="120">time_start</th>
+                    <th width="120">time_end</th>
+
                     <th width="100">จัดการ</th>
                 </tr>
                 </thead>
                 <tbody>
                     @foreach($banners as $banner)
                     <tr>
-                        <td>{{$banner->id}}</td>
-                        <td><img src="{{$banner->thumbnail}}" alt="{{$banner->name}}" width="280" ></td>
-                        <td>{{$banner->title}}</td>
+                        <td class="text-center">{{$banner->id}}</td>
+                        <td class="text-center"><img src="{{$banner->thumbnail}}" alt="{{$banner->name}}" width="280" ></td>
+                        <td class="text-center">{{$banner->title}}</td>
                         <td>{{$banner->start}}</td>
                         <td>{{$banner->end}}</td>
-                        <td>{{$banner->link}}</td>
                         <td >
                             <div class="button-group">
                                 <a href="/admin/banner/{{$banner->id}}/edit" class="btn btn-warning btn-sm"><i

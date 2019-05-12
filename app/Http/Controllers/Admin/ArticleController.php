@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Helpers\ImageUpload;
 use App\Article;
+use App\Category;
 
 class ArticleController extends Controller
 {
@@ -22,7 +23,9 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        return view('admin.article.index');
+        return view('admin.article.index', [
+            'articles' => Article::all()
+        ]);
     }
 
     /**
@@ -32,7 +35,9 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        return view('admin.article.create');
+        return view('admin.article.create', [
+            'categorys' => Category::all()
+        ]);
     }
 
     /**
@@ -54,6 +59,7 @@ class ArticleController extends Controller
             $request->validate($this->rules);
             $article = new Article();
             $article->title = $request->input('title');
+            $article->category_id = $request->input('category_id');
             $article->thumbnail = $imageName;
             $article->user_id = auth()->user()->id ;
             $article->detail = $request->input('detail');
@@ -86,7 +92,9 @@ class ArticleController extends Controller
         $data = [
             'article' => $article
         ];
-        return view('admin.article.edit', $data);
+        return view('admin.article.edit', $data, [
+            'categorys' => Category::all()
+        ]);
     }
 
     /**
@@ -109,6 +117,7 @@ class ArticleController extends Controller
             $request->validate($this->rules);
             $article =  Article::find($id);
             $article->title = $request->input('title');
+            $article->category_id = $request->input('category_id');
             $article->thumbnail = $imageName;
             $article->user_id = auth()->user()->id ;
             $article->detail = $request->input('detail');

@@ -21,8 +21,15 @@
             </div>
             @endif
             <form action="/admin/article" method="POST" enctype="multipart/form-data">
-                @method('patch')
                 @csrf
+                <div class="form-group">
+                    <label for="inputClientTypeId">เลือกหมวดหมู่ </label>
+                    <select name="category_id" id="inputClientTypeId" class="form-control">
+                        @foreach($categorys as $category)
+                        <option value="{{$category->id}}">{{$category->name}}</option>
+                        @endforeach
+                    </select>
+                </div>
                 <div class="form-group">
                     <label for="inputFullname">ชื่อเรื่อง ข่าว</label>
                     <input type="text" class="form-control" name="title"  required placeholder="">

@@ -79,12 +79,12 @@
       <li class="nav-item">
         <a class="nav-link" href="/admin/category">
           <i class="fas fa-fw fa-bookmark"></i>
-          <span>หมวดหมู่สินค้า</span></a>
+          <span>หมวดหมู่ข่าวสาร</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/admin/product">
+        <a class="nav-link" href="/admin/article">
           <i class="fas fa-fw fa-inbox"></i>
-          <span>สินค้า</span></a>
+          <span>ข่าวสาร</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/admin/banner">
@@ -215,7 +215,7 @@
 
 
   <script src="/js/sb-admin-2.min.js"></script>
-  <script src="/js/all.js"></script>
+
   @yield('script')
   <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.js"></script>
 </body>
