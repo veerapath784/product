@@ -14,13 +14,17 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/', function () {
-    return view('homepage');
-});
+// Route::get('/', function () {
+//     return view('homepage');
+// });
+
+Route::resource('/', 'HomeController');
+
+
+
 
 
 // admin
-
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
     Route::get('/', 'Admin\DashboardController@index');
 

@@ -56,7 +56,7 @@ class BannerController extends Controller
         $imageName = "https://via.placeholder.com/450x580";
         if (request()->has('thumbnail')) {
             $imageUpload = new ImageUpload(request()->file('thumbnail'), '/images/banner');
-            $imageUpload->width = 255;
+            $imageUpload->width = 1900;
             $imageUpload->upload();
             $imageUpload->resize('aspect');
             $imageName = $imageUpload->save();
@@ -114,7 +114,7 @@ class BannerController extends Controller
         $imageName = "https://via.placeholder.com/450x580";
         if (request()->has('thumbnail')) {
             $imageUpload = new ImageUpload(request()->file('thumbnail'), '/images/banner');
-            $imageUpload->width = 255;
+            $imageUpload->width = 1900;
             $imageUpload->upload();
             $imageUpload->resize('aspect');
             $imageName = $imageUpload->save();
