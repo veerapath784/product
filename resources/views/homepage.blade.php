@@ -15,8 +15,8 @@
                   @foreach($banners as $banner)
                 <div class="carousel-item @if($j == 0) active @endif" style="background-image: url('{{$banner->thumbnail}}')">
                     <div class="carousel-caption d-none d-md-block">
-                      <h3>First Slide</h3>
-                      <p>This is a description for the first slide.</p>
+                      <h3>{{$banner->title}}</h3>
+                      {{-- <p>This is a description for the first slide.</p> --}}
                     </div>
                   </div>
                   @php($j++)
