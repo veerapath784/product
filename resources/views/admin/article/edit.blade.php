@@ -44,6 +44,10 @@
                                 <input name="thumbnail" type="file">
                             </div>
                         </div>
+                        <div class="form-group">
+                                <label for="inputFullname">เนื้อหาข่าวสั้นๆ</label>
+                                <input type="text" class="form-control" name="description" value="{{$article->description}}  required placeholder="">
+                            </div>
 
                     <textarea id="summernote" name="detail"  >{{$article->detail}}</textarea>
                         <div class="mt-3">

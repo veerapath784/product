@@ -49,7 +49,7 @@
         </div>
 
 @section('script')
-        <<script>
+        <script>
         var deleteItem = function deleteItem(id) {
 
                 swal.fire({

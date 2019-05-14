@@ -20,7 +20,10 @@
 
 Route::resource('/', 'HomeController');
 
+Route::get('/play' ,function (){
 
+    return  'fux';
+});
 
 
 

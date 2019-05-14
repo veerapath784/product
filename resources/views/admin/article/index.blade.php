@@ -28,7 +28,7 @@
                     <tr>
                         <td>{{$article->id}}</td>
                         <td>{{$article->title}}</td>
-                        <td>{{$article->category->name}}</td>
+                        <td>{{$article->category['name']}}</td>
                         {{-- <td>{!!$article->detail!!}</td> --}}
                         <td >
                             <div class="button-group">

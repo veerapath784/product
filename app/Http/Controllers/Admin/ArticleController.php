@@ -63,6 +63,7 @@ class ArticleController extends Controller
             $article->thumbnail = $imageName;
             $article->user_id = auth()->user()->id ;
             $article->detail = $request->input('detail');
+            $article->description = $request->input('description');
             $article-> save();
             return redirect($this->path);
         }
@@ -121,6 +122,7 @@ class ArticleController extends Controller
             $article->thumbnail = $imageName;
             $article->user_id = auth()->user()->id ;
             $article->detail = $request->input('detail');
+            $article->description = $request->input('description');
             $article-> save();
             return redirect($this->path);
     }

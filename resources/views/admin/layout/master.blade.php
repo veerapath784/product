@@ -213,6 +213,8 @@
 
 
   <script src="/js/sb-admin-2.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
   @yield('script')
   <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.js"></script>

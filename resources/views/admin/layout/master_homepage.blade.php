@@ -17,9 +17,11 @@
   <!-- Custom styles for this template -->
   <link href="/css/modern-business.css" rel="stylesheet">
 
+  <link href="https://fonts.googleapis.com/css?family=Prompt|Open+Sans" rel="stylesheet">
+
 </head>
 
-<body>
+<body style="font-family: 'Prompt', sans-serif;">
 
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
