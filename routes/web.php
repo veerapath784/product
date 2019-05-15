@@ -22,31 +22,33 @@ Route::resource('/', 'HomeController');
 
 Route::get('/play' ,function (){
 
-    return  'fux';
+    return auth()->user();
 });
 
 
 
 // admin
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
-    Route::get('/', 'Admin\DashboardController@index');
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(){
 
-    // user
-    Route::resource('user', 'Admin\UserController');
+        Route::get('/', 'Admin\DashboardController@index');
 
-    // userType
-    Route::resource('userType', 'Admin\UserTypeController');
+        // user
+        Route::resource('user', 'Admin\UserController');
 
-    // product
-    Route::resource('product', 'Admin\ProductController');
+        // userType
+        Route::resource('userType', 'Admin\UserTypeController');
 
-    // category
-    Route::resource('category', 'Admin\CategoryController');
+        // product
+        Route::resource('product', 'Admin\ProductController');
 
-    //Banner
-    Route::resource('banner', 'Admin\BannerController');
-    //Article
-    Route::resource('article', 'Admin\ArticleController');
+        // category
+        Route::resource('category', 'Admin\CategoryController');
+
+        //Banner
+        Route::resource('banner', 'Admin\BannerController');
+        //Article
+        Route::resource('article', 'Admin\ArticleController');
+
 });
 
 

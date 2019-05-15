@@ -14,6 +14,7 @@ class ArticleController extends Controller
     protected $rules = [
         'title' => 'required',
         'thumbnail' => 'required|file',
+        'description' => 'required|max:255'
     ];
     protected $path = "/admin/article";
     /**
@@ -111,6 +112,7 @@ class ArticleController extends Controller
         if (request()->has('thumbnail')) {
             $imageUpload = new ImageUpload(request()->file('thumbnail'), '/images/article');
             $imageUpload->width = 255;
+            $imageUpload->height = 255;
             $imageUpload->upload();
             $imageUpload->resize('aspect');
             $imageName = $imageUpload->save();
