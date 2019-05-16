@@ -48,6 +48,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
         Route::resource('banner', 'Admin\BannerController');
         //Article
         Route::resource('article', 'Admin\ArticleController');
+        //Facebook
+        Route::resource('fb_page', 'Admin\FbpageController');
 
 });
 

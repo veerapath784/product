@@ -12,7 +12,11 @@
   <title>SB Admin 2 - Blank</title>
 
   <!-- Custom fonts for this template-->
+
+
+
   <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
@@ -91,6 +95,11 @@
           <i class="fas fa-fw fa-bullhorn"></i>
           <span>การโปรโมท</span></a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/admin/fb_page">
+          <i class="fa fa-facebook-square"></i>
+          <span>เพื่มเพจ facebook</span></a>
+      </li>
 
 
       <!-- Divider -->
@@ -98,7 +107,7 @@
 
       <li class="nav-item mb-3">
         <a class="nav-link" href="{{ route('logout') }}">
-          <i class="fas fa-fw fa-reply"></i>
+          <i class="fa fa-sign-out"></i>
           <span>ออกจากระบบ</span></a>
       </li>
       <!-- Sidebar Toggler (Sidebar) -->
@@ -123,7 +132,7 @@
             <i class="fa fa-bars"></i>
           </button>
 
-          <!-- Topbar Search -->
+          {{-- <!-- Topbar Search -->
           <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
             <div class="input-group">
               <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
@@ -133,7 +142,7 @@
                 </button>
               </div>
             </div>
-          </form>
+          </form> --}}
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
