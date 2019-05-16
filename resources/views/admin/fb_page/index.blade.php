@@ -21,7 +21,7 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>#</th>
+
                             <th>เพื่มรายการ เพจเฟสบุ๊ค</th>
                             <th>จัดการ</th>
                         </tr>
@@ -29,16 +29,16 @@
                     <tbody>
                         @foreach($fbpages as $fbpage)
                         <tr>
-                            <td>{{$fbpage->id}}</td>
+
                             <td>{{$fbpage->link}}</td>
                             <td>
                                 <div class="button-group">
                                     <a href="/admin/fb_page/{{$fbpage->id}}/edit" class="btn btn-warning btn-sm"><i
                                             class="fa fa-edit"></i></a>
 
-                            <a href="javaScript: deleteItem('{{$fbpage->id  }}')" class="btn  btn-danger btn-sm">
+                            {{-- <a href="javaScript: deleteItem('{{$fbpage->id  }}')" class="btn  btn-danger btn-sm">
                                     <i class="fa fa-trash"></i>
-                                </a>
+                                </a> --}}
                                 </div>
                             </td>
                         </tr>

@@ -56,7 +56,7 @@
 
                 </div>
                 <div class="col-md-6">
-                    <a href="#" class="text-info">
+                    <a href="/news/{!! $article->id !!}" class="text-info">
                         <h5>{{$article->title}}</h5>
                         <p>{!!$article->description!!}</p>
                     </a>
