@@ -38,14 +38,14 @@
         </a>
     </div>
 
-</header >
+</header>
 <div class="col-md-9">
     <div id="news"></div>
 </div>
 <!-- Page New Articles -->
-<div class="container mt-5" >
-    <h2 class="fontPrompt mb-3" style="border-left:10px solid #FDE313;" >
-        <span style="margin-left:15px;" >ข่าวใหม่ล่าสุด</span></h2>
+<div class="container mt-5">
+    <h2 class="fontPrompt mb-3" style="border-left:10px solid #FDE313;">
+        <span style="margin-left:15px;">ข่าวใหม่ล่าสุด</span></h2>
     <div class="row">
         @foreach ($latestArticle as $article)
         <div class="col-md-6">
@@ -75,10 +75,11 @@
             <div class="col-md-10">
 
                 <ul class="nav nav-tabs">
-                        @php($i = 0)
-                        @foreach ($categories as $category)
+                    @php($i = 0)
+                    @foreach ($categories as $category)
                     <li class="nav-item ">
-                        <a class="nav-link text-primary @if($i == 0) active @endif" data-toggle="tab" href="#menu{{$i}}">{!!$category->name!!}</a>
+                        <a class="nav-link text-primary @if($i == 0) active @endif" data-toggle="tab"
+                            href="#menu{{$i}}">{!!$category->name!!}</a>
                     </li>
                     @php($i++)
                     @endforeach
@@ -91,7 +92,10 @@
                     <div class="text-dark tab-pane container @if($i == 0) active @endif" id="menu{{$i}}">
                         <ul>
                             @foreach($category->articles as $article)
-                            <li>{!!$article->title!!}</li>
+                            <li><a href="/news/{!! $article->id !!}" class="text-info">
+                                    <p>{{$article->title}}</p>
+
+                                </a> </li>
                             @endforeach
                         </ul>
                     </div>
@@ -102,67 +106,17 @@
             </div>
 
             <div class="col-md-2">
+                @foreach ($fbpage as $fbpage_row)
                 <iframe
-                    src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/mpecCMRU/&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1730915820521210"
+            src="https://www.facebook.com/plugins/page.php?href={{$fbpage_row->link}}&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1730915820521210"
                     width="340" height="214" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
                     allowTransparency="true" allow="encrypted-media"></iframe>
-            </div>
+                    @endforeach
+                </div>
         </div>
     </div>
 </div>
-
-
-
-
-
 <br>
 </div>
-<!-- Footer -->
-{{-- <footer class="py-5 bg-dark">
-    <div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <p class=" text-white">Copyright &copy; Your Website 2019</p>
-        </div>
-        @foreach ($users as $user)
-
-        <div class="col-md-6">
-            <p class="m-0 text-center text-white">{{$user->address}}</p>
 </div>
-@endforeach
-</div>
-
-</div>
-</footer> --}}
-
-</div>
-
-
 @endsection
-{{--
-<div class="col-md-12">
-    <div role="tabpanel" class="mgTop15px">
-        <!-- Nav tabs -->
-        <ul class="nav nav-tabs" role="tablist">
-            @foreach ($categories as $category)
-            <li role="presentation" class="active">
-                <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
-                    <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-                    {{$category->name}}</a></li>
-@endforeach
-</ul>
-
-<!-- Tab panes -->
-<div class="tab-content pdAll5px fontcoloryellow">
-    <div role="tabpanel" class="tab-pane active" id="home">
-        <ul class="list-unstyled">
-            <li class="borderdash">
-                <i class="fa fa-folder-open"></i>
-                <a href="#">2562</a>
-            </li>
-
-        </ul>
-    </div>
-</div>
-</div>
-</div> --}}

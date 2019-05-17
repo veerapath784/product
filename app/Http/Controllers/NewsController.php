@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Article;
 use App\Category;
+use App\Fbpage;
 
 class NewsController extends Controller
 {
@@ -55,7 +56,8 @@ class NewsController extends Controller
 
 
         return view('shownews', [
-            'article' => Article::find($id)
+            'article' => Article::find($id),
+            'fbpage' => Fbpage::all(),
         ]);
     }
 

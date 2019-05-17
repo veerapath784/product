@@ -6,7 +6,7 @@ use App\Banner;
 use Illuminate\Http\Request;
 use App\Article;
 use App\User;
-
+use App\Fbpage;
 
 class HomeController extends Controller
 {
@@ -18,8 +18,8 @@ class HomeController extends Controller
             'latestArticle' => Article::orderBy('id', 'desc')->limit(4)->get(),
             'articles' => Article::all(),
             'latestCategory' => Category::orderBy('id', 'desc')->first(),
-            'users' =>  User::all()
-
+            'users' =>  User::all(),
+            'fbpage' => Fbpage::all(),
             ]);
     }
 

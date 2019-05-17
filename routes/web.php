@@ -24,7 +24,7 @@ Route::get('/play' ,function (){
 
     return view('shownews');
 });
-
+Route::get('fbpage', 'FbpageController@index');
 Route::get('/news/{id}', 'NewsController@show');
 
 // admin
