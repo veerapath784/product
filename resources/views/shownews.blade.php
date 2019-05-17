@@ -2,9 +2,12 @@
 @section('content')
 <br>
 <div class="container">
-    @foreach ($latestArticle as $article)
+
     <div class="row">
-            <h2 class="fontsupermarket">{{$article->title}}</h2>
+    <h2 class="fontsupermarket">{{$article->title}}</h2>
+    <div class="row">
+    <p>{!!$article->detail!!}</p>
     </div>
-    @endforeach
+    </div>
+
 </div>

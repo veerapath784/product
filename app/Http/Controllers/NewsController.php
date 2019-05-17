@@ -48,18 +48,14 @@ class NewsController extends Controller
      */
     public function show($id)
     {
-         //ค้นหาข่าวจาก article id
-         try {
-            $article = Article::findOrFail($id);
-        } catch (ModelNotFoundException $e) {
-            abort(404);
-        }
-        //เรียกใช้งาน view shownews.blade.php
+        $article = Article::find($id);
+        $data = [
+            'article' => $article
+        ];
+
+
         return view('shownews', [
-            //ส่งค่าข่าวที่ได้ไปยังตัวแปร article
-            'categories' => Category::all(),
-            'latestArticle' => Article::orderBy('id'),
-            'url' => url('news/' . $id )
+            'article' => Article::find($id)
         ]);
     }
 
