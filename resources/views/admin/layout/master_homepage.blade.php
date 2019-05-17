@@ -26,7 +26,7 @@
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html"><span>SRS</span> ระบบประชาสัมพันธ์ออนไลน์</a>
+      <a class="navbar-brand" href="/"><span>SRS</span> ระบบประชาสัมพันธ์ออนไลน์</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -38,6 +38,9 @@
           <li class="nav-item">
             <a class="nav-link" href="services.html">เกียวกับเรา</a>
           </li>
+          <li class="nav-item">
+                <a class="nav-link" href="#">เลือกชมสินค้า</a>
+              </li>
           <li class="nav-item">
             <a class="nav-link" href="#news">ข่าวใหม่</a>
           </li>
