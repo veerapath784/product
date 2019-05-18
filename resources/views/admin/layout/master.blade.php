@@ -9,7 +9,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Blank</title>
+  <title>SRS System Shop/Admin</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/images/LogoMakr_2ToleR.png" /
 
   <!-- Custom fonts for this template-->
 

@@ -20,10 +20,10 @@
             <div class="carousel-item @if($j == 0) active @endif"
                 style="background-image: url('{{$banner->thumbnail}}')">
                 <span class="badge badge-pill badge-danger">New</span>
-                <div class="carousel-caption d-none d-md-block">
+                {{-- <div class="carousel-caption d-none d-md-block">
                     <h3>{{$banner->title}}</h3>
                     <a href="{{$banner->link}}" class="btn btn-outline-primary">คลิกเลยยย !!</a>
-                </div>
+                </div> --}}
             </div>
             @php($j++)
             @endforeach
@@ -106,12 +106,11 @@
             </div>
 
             <div class="col-md-2">
-                @foreach ($fbpage as $fbpage_row)
                 <iframe
-            src="https://www.facebook.com/plugins/page.php?href={{$fbpage_row->link}}&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1730915820521210"
+            src="https://www.facebook.com/plugins/page.php?href={{$fbpage->link}}&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1730915820521210"
                     width="340" height="214" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
                     allowTransparency="true" allow="encrypted-media"></iframe>
-                    @endforeach
+
                 </div>
         </div>
     </div>

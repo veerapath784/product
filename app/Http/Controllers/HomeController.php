@@ -19,7 +19,7 @@ class HomeController extends Controller
             'articles' => Article::all(),
             'latestCategory' => Category::orderBy('id', 'desc')->first(),
             'users' =>  User::all(),
-            'fbpage' => Fbpage::all(),
+            'fbpage' => Fbpage::first(),
             ]);
     }
 

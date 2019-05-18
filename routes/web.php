@@ -22,7 +22,7 @@ Route::resource('/', 'HomeController');
 
 Route::get('/play' ,function (){
 
-    return view('shownews');
+    return view('profile');
 });
 Route::get('fbpage', 'FbpageController@index');
 Route::get('/news/{id}', 'NewsController@show');
