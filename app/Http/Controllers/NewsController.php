@@ -51,14 +51,12 @@ class NewsController extends Controller
     {
         $article = Article::find($id);
         $data = [
-            'article' => $article
+            'article' => $article,
+            'fbpage' => Fbpage::first()
         ];
 
 
-        return view('shownews', [
-            'article' => Article::find($id),
-            'fbpage' => Fbpage::all(),
-        ]);
+        return view('shownews', $data);
     }
 
 
