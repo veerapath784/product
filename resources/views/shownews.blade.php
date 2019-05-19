@@ -1,10 +1,19 @@
 @extends('admin.layout.master_homepage')
 @section('content')
 <br>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v3.3&appId=597010904140661&autoLogAppEvents=1"></script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v3.3&appId=597010904140661&autoLogAppEvents=1"></script>
+<script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+
 <div class="container">
     <div class="row">
         <div class="col-md-9">
             <h2 class="fontsupermarket">{{$article->title}}</h2>
+
+            <div class="line-it-button" data-lang="th" data-type="like" data-url="http://localhost:8000/news/{!! $url !!}" style="display: none;"></div>
+
+            <div class="fb-like" data-href="http://localhost:8000/news/{!! $url !!}" data-width="" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
 
         </div>
     </div>
@@ -14,6 +23,7 @@
         <div class="col-md-9">
             <hr>
             <p>{!!$article->detail!!}</p>
+
         </div>
         <div class="col-md-3">
             <iframe
@@ -23,12 +33,7 @@
         </div>
     </div>
     <div class="ml-5">
-        <div id="fb-root"></div>
-        <script async defer crossorigin="anonymous"
-            src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v3.3&appId=1730915820521210&autoLogAppEvents=1">
-        </script>
-        <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator"
-            data-width="" data-numposts="5"></div>
+        <div class="fb-comments" data-href="http://localhost:8000/news/{!! $url !!}" data-width="90%" data-numposts="5"></div>
     </div>
 </div>
 </div>

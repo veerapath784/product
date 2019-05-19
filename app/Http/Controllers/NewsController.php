@@ -56,7 +56,9 @@ class NewsController extends Controller
         ];
 
 
-        return view('shownews', $data);
+        return view('shownews', $data,[
+            'url' => url('news/' . $id )
+        ]);
     }
 
 
