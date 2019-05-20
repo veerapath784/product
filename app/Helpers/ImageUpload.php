@@ -8,7 +8,7 @@ use Carbon\Carbon;
 class ImageUpload
 {
     public $file;
-    public $baseWidth = 1900;
+    public $baseWidth = 1280;
     public $baseHeight = null;
     public $width = 250;
     public $height = 250;

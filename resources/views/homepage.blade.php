@@ -2,7 +2,8 @@
 @section('content')
 
 <header>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div class="container">
+    <div id="carouselExampleIndicators" class="carousel slide mt-5" data-ride="carousel">
 
         <ol class="carousel-indicators">
 
@@ -18,16 +19,17 @@
             @foreach($banners as $banner)
 
             <div class="carousel-item @if($j == 0) active @endif"
-                style="background-image: url('{{$banner->thumbnail}}')">
+                style="background-image: url('{{$banner->thumbnail}}') ">
                 <span class="badge badge-pill badge-danger">New</span>
-                {{-- <div class="carousel-caption d-none d-md-block">
-                    <h3>{{$banner->title}}</h3>
-                    <a href="{{$banner->link}}" class="btn btn-outline-primary">คลิกเลยยย !!</a>
-                </div> --}}
+                <div class="carousel-caption d-none d-md-block">
+                    <h4>
+                    <a href="{{$banner->link}}" style="color:ivory">{{$banner->title}}</a></h4>
+                </div>
             </div>
             @php($j++)
             @endforeach
         </div>
+    </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
@@ -45,7 +47,9 @@
 <!-- Page New Articles -->
 <div class="container mt-5">
     <h2 class="fontPrompt mb-3" style="border-left:10px solid #FDE313;">
-        <span style="margin-left:15px;">ข่าวใหม่ล่าสุด</span></h2>
+        <span style="margin-left:15px;">ข่าวใหม่ล่าสุด </span></h2>
+        <hr width="100%  size="20" color="#FDE313" align="left">
+
     <div class="row">
         @foreach ($latestArticle as $article)
         <div class="col-md-6">
@@ -55,6 +59,7 @@
                         style="max-height:150px; ">
 
                 </div>
+
                 <div class="col-md-6">
                     <a href="/news/{!! $article->id !!}" class="text-info">
                         <h5>{{$article->title}}</h5>
@@ -65,15 +70,21 @@
         </div>
         @endforeach
     </div>
-    <hr>
+
+
+
 </div>
 
 
 <div class="container">
+
+        <h2 class="fontPrompt mb-3" style="border-left:10px solid #FDE313;">
+                <span style="margin-left:15px;">หมวดหมู่ข่าว </span></h2>
+                <hr width="100%  size="20" color="#FDE313" align="left">
     <div class="col-lg-9">
         <div class="row">
             <div class="col-md-10">
-
+                    <div id="Cnews"></div>
                 <ul class="nav nav-tabs">
                     @php($i = 0)
                     @foreach ($categories as $category)
@@ -89,10 +100,10 @@
                 <div class="tab-content">
                     @php($i = 0)
                     @foreach ($categories as $category)
-                    <div class="text-dark tab-pane container @if($i == 0) active @endif" id="menu{{$i}}">
+                    <div class="text-warning tab-pane container @if($i == 0) active @endif" id="menu{{$i}}">
                         <ul>
                             @foreach($category->articles as $article)
-                            <li><a href="/news/{!! $article->id !!}" class="text-info">
+                            <li><a href="/news/{!! $article->id !!}" class="text-dark">
                                     <p>{{$article->title}}</p>
 
                                 </a> </li>
