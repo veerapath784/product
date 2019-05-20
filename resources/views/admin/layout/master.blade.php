@@ -107,6 +107,11 @@
           <i class="fa fa-facebook-square"></i>
           <span>เพื่มเพจ facebook</span></a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/admin/contact">
+            <i class="fa fa-address-card-o" aria-hidden="true"></i>
+          <span>เพื่ม google maps</span></a>
+      </li>
 
 
       <!-- Divider -->

@@ -20,10 +20,10 @@
 
 Route::resource('/', 'HomeController');
 
-// Route::get('/play' ,function (){
+Route::get('/play' ,function (){
 
-//     return view('contact');
-// });
+    return view('showcontact');
+});
 Route::get('fbpage', 'FbpageController@index');
 Route::get('/news/{id}', 'NewsController@show');
 

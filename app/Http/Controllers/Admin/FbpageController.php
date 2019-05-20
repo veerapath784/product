@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use Aqpp\Http\Controllers\Controller;
 use App\Fbpage;
 
 class FbpageController extends Controller
@@ -12,7 +12,7 @@ class FbpageController extends Controller
         'link' => 'required',
 
     ];
-    
+
     protected $path = "/admin/fb_page";
     /**
      * Display a listing of the resource.

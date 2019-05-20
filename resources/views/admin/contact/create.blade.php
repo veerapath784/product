@@ -20,17 +20,30 @@
 
             <form action="/admin/contact" method="POST" enctype="multipart/form-data">
                 @csrf
-                
+
                 <div class="form-group">
                     <label for="inputFullname">ชื่อสาขา</label>
                     <input type="text" class="form-control" name="title" id="inpuName" required placeholder="กรอกชื่อ ติดต่อเรา">
                 </div>
+
                 <div class="form-group">
-                    <label>ลิงค์ (google-maps) <span class="pull-right">&nbsp;</span></label>
+
+                    <label>ลิงค์ (google-maps) <span class="pull-right">&nbsp;</span><div class="row text-center text-lg-left" style="width:100em;" >
+
+                            <div class="col-lg-3 col-md-4 col-6 ">
+                                    <img class="img-fluid img-thumbnail" src="/images/01.jpg" alt="">
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-6">
+                                    <img class="img-fluid img-thumbnail" src="/images/02.jpg" alt="">
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-6">
+                                    <img class="img-fluid img-thumbnail" src="/images/03.jpg" alt="">
+                            </div>
+                    </div></label>
 
                     <div class="input-group">
                         <input class="form-control"
-                            placeholder="เช่น http://www.cmru.ac.th/category/1-ข่าวประชาสัมพันธ์.html"
+                            placeholder="เช่น https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3776."
                             name="link" type="text">
 
                         </span>
