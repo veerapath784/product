@@ -20,10 +20,10 @@
 
 Route::resource('/', 'HomeController');
 
-Route::get('/play' ,function (){
+// Route::get('/play' ,function (){
 
-    return view('contact');
-});
+//     return view('contact');
+// });
 Route::get('fbpage', 'FbpageController@index');
 Route::get('/news/{id}', 'NewsController@show');
 
@@ -50,7 +50,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
         Route::resource('article', 'Admin\ArticleController');
         //Facebook
         Route::resource('fb_page', 'Admin\FbpageController');
-        //News
+        //Contact
+        Route::resource('contact', 'Admin\ContactController');
 
 
 });

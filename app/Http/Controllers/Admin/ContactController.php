@@ -4,16 +4,17 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Fbpage;
-
-class FbpageController extends Controller
+use App\Contact;
+class ContactController extends Controller
 {
     protected $rules = [
+        'title' => 'required',
         'link' => 'required',
-
+        'address' => 'required|min:5',
+        'phone' => 'required'
     ];
-    
-    protected $path = "/admin/fb_page";
+
+    protected $path = "/admin/contact";
     /**
      * Display a listing of the resource.
      *
@@ -21,8 +22,8 @@ class FbpageController extends Controller
      */
     public function index()
     {
-        return view('admin.fb_page.index', [
-            'fbpages' => Fbpage::all()
+        return view('admin.contact.index', [
+            'contact' => Contact::all()
         ]);
     }
 
@@ -33,7 +34,7 @@ class FbpageController extends Controller
      */
     public function create()
     {
-        return view('admin.fb_page.create');
+        return view('admin.contact.create');
     }
 
     /**
@@ -45,10 +46,16 @@ class FbpageController extends Controller
     public function store(Request $request)
     {
         $request->validate($this->rules);
-        $fbpage = new Fbpage();
-        $fbpage->link = $request->input('link');
-        $fbpage->save();
+        $contact = new Contact();
+        $contact->title = $request->input('title');
+        $contact->link = $request->input('link');
+        $contact->email = $request->input('email');
+        $contact->address = $request->input('address');
+        $contact->phone = $request->input('phone');
+        $contact->save();
         return redirect($this->path);
+
+
     }
 
     /**
@@ -70,11 +77,7 @@ class FbpageController extends Controller
      */
     public function edit($id)
     {
-        $fbpage = Fbpage::find($id);
-        $data = [
-            'fbpage' => $fbpage
-        ];
-        return view('admin.fb_page.edit', $data);
+        //
     }
 
     /**
@@ -86,11 +89,7 @@ class FbpageController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate($this->rules);
-        $fbpage = Fbpage::find($id);
-        $fbpage->link = $request->input('link');
-        $fbpage->save();
-        return redirect($this->path);
+        //
     }
 
     /**
@@ -101,8 +100,6 @@ class FbpageController extends Controller
      */
     public function destroy($id)
     {
-        $fbpage = \App\Fbpage::find($id);
-        $fbpage->delete();
-        return response()->json();
+        //
     }
 }
