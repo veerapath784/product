@@ -9,7 +9,7 @@
     <meta name="author" content="">
 
     <title>SRS System Shop</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/images/LogoMakr_2ToleR.png" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
     <!-- Bootstrap core CSS -->
     <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,8 +26,8 @@
     <!-- Navigation -->
     <div class="container">
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand" href="/"> <span><img src="/images/LogoMakr_2ToleR.png" width="29"></span>
-                ระบบประชาสัมพันธ์ออนไลน์</a>
+            <a class="navbar-brand ml-5" href="/"> <span><i class="fa fa-scribd" aria-hidden="true"></i></span>
+               MeShop</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
