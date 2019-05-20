@@ -13,17 +13,17 @@
 
 <div class="container">
     <div class="row">
-            <ol class="breadcrumb bg-white">
-                    <li><a href="{!! url('/') !!}">หน้าแรก </a></li>
-                    &nbsp;&nbsp;<i class="fa fa-angle-double-right mt-1" aria-hidden="true"></i>&nbsp;&nbsp;
+        <ol class="breadcrumb bg-white">
+            <li><a href="{!! url('/') !!}">หน้าแรก </a></li>
+            &nbsp;&nbsp;<i class="fa fa-angle-double-right mt-1" aria-hidden="true"></i>&nbsp;&nbsp;
 
-                    <li>
-                        <a href="/#Cnews">{!!
-                            $article->category->name !!} </a></li>
-                            &nbsp;&nbsp;<i class="fa fa-angle-double-right mt-1" aria-hidden="true"></i>&nbsp;&nbsp;
-                    <li class="active">{!! $article->title !!}
-                    </li>
-                </ol>
+            <li>
+                <a href="/#Cnews">{!!
+                    $article->category->name !!} </a></li>
+            &nbsp;&nbsp;<i class="fa fa-angle-double-right mt-1" aria-hidden="true"></i>&nbsp;&nbsp;
+            <li class="active">{!! $article->title !!}
+            </li>
+        </ol>
         <div class="col-md-9">
 
             <h2 class="fontsupermarket">{{$article->title}}</h2>
@@ -55,5 +55,4 @@
         <div class="fb-comments" data-href="http://localhost:8000/news/{!! $url !!}" data-width="" data-numposts="5">
         </div>
     </div>
-</div>
 </div>
