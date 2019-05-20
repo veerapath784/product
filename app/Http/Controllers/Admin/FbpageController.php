@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use Aqpp\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 use App\Fbpage;
 
 class FbpageController extends Controller
