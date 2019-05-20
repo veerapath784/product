@@ -109,7 +109,7 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/admin/contact">
-            <i class="fa fa-address-card-o" aria-hidden="true"></i>
+            <i class="fa fa-street-view" aria-hidden="true"></i>
           <span>เพื่ม google maps</span></a>
       </li>
 
