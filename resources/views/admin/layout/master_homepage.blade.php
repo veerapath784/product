@@ -39,7 +39,7 @@
                         <a class="nav-link" href="/">หน้าหลัก</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="services.html">เกียวกับเรา</a>
+                        <a class="nav-link" href="services.html">ติดต่อเรา</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">เลือกชมสินค้า</a>
@@ -61,7 +61,7 @@
                                 aria-expanded="false">{{ Auth::user()->fullname }} <span class="caret"></span></a>
 
 
-                                
+
                             <a class="dropdown-item" href="{{ url('/logout') }}">ออกจากระบบ</a>
                             @endif
                         </div>
