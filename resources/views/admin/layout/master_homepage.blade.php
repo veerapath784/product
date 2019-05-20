@@ -39,13 +39,13 @@
                         <a class="nav-link" href="/">หน้าหลัก</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="services.html">ติดต่อเรา</a>
+                        <a class="nav-link" href="/contact">ติดต่อเรา</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">เลือกชมสินค้า</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#news">ข่าวใหม่</a>
+                        <a class="nav-link" href="/#news">ข่าวใหม่</a>
                     </li>
                     <li class="nav-item dropdown ">
                         <a class="nav-link " href="#" id="navbarDropdownBlog" data-toggle="dropdown"

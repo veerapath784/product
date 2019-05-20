@@ -20,12 +20,13 @@
 
 Route::resource('/', 'HomeController');
 
-Route::get('/play' ,function (){
+// Route::get('/play' ,function (){
 
-    return view('showcontact');
-});
+//     return view('showcontact');
+// });
 Route::get('fbpage', 'FbpageController@index');
 Route::get('/news/{id}', 'NewsController@show');
+Route::get('contact', 'ShowcontactController@index');
 
 // admin
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(){

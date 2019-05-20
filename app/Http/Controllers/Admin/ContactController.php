@@ -9,7 +9,6 @@ class ContactController extends Controller
 {
     protected $rules = [
         'title' => 'required',
-        'link' => 'required',
         'address' => 'required|min:5',
         'phone' => 'required'
     ];

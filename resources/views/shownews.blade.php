@@ -18,8 +18,8 @@
             &nbsp;&nbsp;<i class="fa fa-angle-double-right mt-1" aria-hidden="true"></i>&nbsp;&nbsp;
 
             <li>
-                <a href="/#Cnews">{!!
-                    $article->category->name !!} </a></li>
+                {!!
+                    $article->category->name !!}</li>
             &nbsp;&nbsp;<i class="fa fa-angle-double-right mt-1" aria-hidden="true"></i>&nbsp;&nbsp;
             <li class="active">{!! $article->title !!}
             </li>
