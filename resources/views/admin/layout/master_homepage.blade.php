@@ -42,7 +42,7 @@
                         <a class="nav-link" href="/contact">ติดต่อเรา</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">เลือกชมสินค้า</a>
+                        <a class="nav-link" href="http://www.project3.cmru.ac.th/60134740/?fbclid=IwAR0SzYkfNdD19vVlgm6VsqkqsMWgquoFtcmEO01TCmhgMCM2Ph_kC6VX_rc">เลือกชมสินค้า</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/#news">ข่าวใหม่</a>
@@ -57,8 +57,9 @@
                             <a class="dropdown-item" href="{{ url('/login') }}">เข้าสู่ระบบ</a>
                             <a class="dropdown-item" href="{{ url('/register') }}">สมัคสมาชิก</a>
                             @else
+
                             <a href="#" class="dropdown-item" data-toggle="dropdown" role="button"
-                                aria-expanded="false">{{ Auth::user()->fullname }} <span class="caret"></span></a>
+                                aria-expanded="false"> <a class="dropdown-item" href="{{ url('/admin') }}">{{ Auth::user()->fullname }}</a> <span class="caret"></span></a>
 
 
 

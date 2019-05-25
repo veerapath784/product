@@ -53,7 +53,8 @@
                         <div class="mt-3">
                         <button class="btn btn-success" id="btnsmt" type="submit">บันทึก</button>
                     </div>
-        @endsection
+
+
 @section('script')
 <script>
 $(document).ready(function() {
@@ -65,4 +66,5 @@ $(document).ready(function() {
   });
 
 </script>
+@endsection
 @endsection

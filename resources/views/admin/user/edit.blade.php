@@ -42,11 +42,11 @@
             </div>
             <div class="form-group">
                     <label for="inputFullname">เบอร์ติดต่อ</label>
-                    <input type="text" class="form-control" name="phone" placeholder="กรอกเบอร์ติดต่อ">
+                    <input type="text" class="form-control" value="{{$user->phone}}" name="phone" placeholder="กรอกเบอร์ติดต่อ">
                 </div>
                 <div class="form-group shadow-textarea">
                     <label for="exampleFormControlTextarea6">ที่อยู่</label>
-                    <textarea class="form-control z-depth-1" id="inpuAddreass" rows="6" name="address" placeholder="กรอกที่อยู่"></textarea>
+                    <textarea class="form-control z-depth-1" id="inpuAddreass" rows="6"  name="address" placeholder="กรอกที่อยู่">{{$user->address}}</textarea>
                 </div>
             <button type="submit" class="btn btn-primary btn-sm"><i class=" fa fa-edit"></i> แก้ไขผู้ใช้งาน</button>
 
