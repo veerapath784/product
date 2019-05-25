@@ -48,7 +48,7 @@
                     <label for="exampleFormControlTextarea6">ที่อยู่</label>
                     <textarea class="form-control z-depth-1" id="inpuAddreass" rows="6"  name="address" placeholder="กรอกที่อยู่">{{$user->address}}</textarea>
                 </div>
-            <button type="submit" class="btn btn-primary btn-sm"><i class=" fa fa-edit"></i> แก้ไขผู้ใช้งาน</button>
+            <button type="submit" class="btn btn-warning btn-sm"><i class=" fa fa-edit"></i>บันทึกข้อมูล</button>
 
 
 

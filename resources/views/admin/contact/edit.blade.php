@@ -63,7 +63,7 @@
                     <label for="quantity">เบอร์ติดต่อ</label>
                     <input type="text"   value="{{$contact->phone}}" class="form-control" name="phone" id="inputPrice" required placeholder="กรอกราคา เบอร์ติดต่อ">
                 </div>
-                <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> บันทึกข้อมูล</button>
+                <button type="submit" class="btn btn-warning"><i class="fa fa-plus"></i> บันทึกข้อมูล</button>
             </form>
         </div>
     </div>

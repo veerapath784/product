@@ -51,7 +51,7 @@
 
                     <textarea id="summernote" name="detail"  >{{$article->detail}}</textarea>
                         <div class="mt-3">
-                        <button class="btn btn-success" id="btnsmt" type="submit">บันทึก</button>
+                        <button class="btn btn-warning" id="btnsmt" type="submit">บันทึก</button>
                     </div>
         @endsection
 @section('script')

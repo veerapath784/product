@@ -29,7 +29,7 @@
                         <input class="form-control" placeholder="เช่น http://..." name="link" type="text">
                 </div>
 
-                <button type="submit" class="btn btn-warning"><i class="fa fa-plus"></i> แก้ไข เพจเฟสบุ๊ค</button>
+                <button type="submit" class="btn btn-warning"><i class="fa fa-plus"></i>บันทึกข้อมูล</button>
             </form>
         </div>
     </div>

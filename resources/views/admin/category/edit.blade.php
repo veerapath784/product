@@ -27,7 +27,7 @@
                     <input type="text" class="form-control" name="name" id="inpuName" value="{{$category->name}}" required placeholder="กรอกชื่อ หมวดหมู่ข่าวสาร">
                 </div>
 
-                <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> เพิ่มหมวดหมู่ข่าวสาร</button>
+                <button type="submit" class="btn btn-warning"><i class="fa fa-plus"></i> บันทึกข้อมูล</button>
             </form>
         </div>
     </div>
