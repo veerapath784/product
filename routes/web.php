@@ -54,7 +54,10 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
         //Contact
         Route::resource('contact', 'Admin\ContactController');
          //Logo
-        Route::resource('logo', 'Admin\LOgoController');
+        Route::resource('logo', 'Admin\LogoController');
+
+        //product
+        Route::resource('product', 'Admin\ProductController');
 
 
 });
