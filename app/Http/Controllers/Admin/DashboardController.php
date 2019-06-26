@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Category;
 use App\Banner;
-
 use App\Article;
 use App\User;
 use App\Fbpage;
@@ -27,7 +26,7 @@ class DashboardController extends Controller
             'latestCategory' => Category::orderBy('id', 'desc')->first(),
             'users' =>  User::all(),
             'fbpage' => Fbpage::first(),
-            'logo' => Logo::first(),
+            'logos' => Logo::first(),
             ]);
     }
 }

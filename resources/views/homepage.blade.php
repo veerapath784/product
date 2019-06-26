@@ -4,7 +4,7 @@
 
         <div class="container mt-2" style="background-color: #fff; padding-top:10px;  border-radius: 3px;    border: 1px solid LightGray;">
                 <div class="text-center">
-            <img class="img-fluid rounded " width="20%" src="{{$logo->thumbnail}}" alt=""
+            <img class="img-fluid rounded " width="20%" src="{{$logos->thumbnail}}" alt=""
             > </div>
             <div><i class="fas fa-phone-square"></i> Tel. {{$contact->phone}}</div>
     <div id="carouselExampleIndicators" class="carousel slide mt-3 " data-ride="carousel" style="">
