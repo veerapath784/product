@@ -43,18 +43,17 @@
                                     >
                             </div>
                             <div class="form-group">
-                                <label>วัน - เวลาสิ้นสุด <span class="text-danger">*</span></label>
+                                <label>วัน - เวลาเริ่มต้น : <span class="text-danger">*</span></label>
                                 <input class="form-control"  id="end" name="end" type="date"
                                     >
                             </div>
                             <div class="form-group">
-                                <label>ลิงค์ (ไปยังหน้าเว็บ) <span class="pull-right">&nbsp;</span></label>
+                                <label>ลิงค์ (ไปยังหน้าเว็บ) : <span class="pull-right">&nbsp;</span></label>
 
                                 <div class="input-group">
                                     <input class="form-control"
                                         placeholder="เช่น http://www.cmru.ac.th/category/1-ข่าวประชาสัมพันธ์.html"
                                         name="link" type="text">
-
                                     </span>
                                 </div>
                             </div>

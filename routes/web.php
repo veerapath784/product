@@ -53,6 +53,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
         Route::resource('fb_page', 'Admin\FbpageController');
         //Contact
         Route::resource('contact', 'Admin\ContactController');
+         //Logo
+        Route::resource('logo', 'Admin\LOgoController');
 
 
 });

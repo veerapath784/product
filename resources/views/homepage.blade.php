@@ -1,9 +1,13 @@
 @extends('admin.layout.master_homepage')
 @section('content')
 
-<header>
-    <div class="container">
-    <div id="carouselExampleIndicators" class="carousel slide mt-5" data-ride="carousel">
+
+        <div class="container mt-2" style="background-color: #fff; padding-top:10px;  border-radius: 3px;    border: 1px solid LightGray;">
+                <div class="text-center">
+            <img class="img-fluid rounded " width="20%" src="{{$logo->thumbnail}}" alt=""
+            > </div>
+            <div><i class="fas fa-phone-square"></i> Tel. {{$contact->phone}}</div>
+    <div id="carouselExampleIndicators" class="carousel slide mt-3 " data-ride="carousel" style="">
 
         <ol class="carousel-indicators">
 
@@ -19,17 +23,17 @@
             @foreach($banners as $banner)
 
             <div class="carousel-item @if($j == 0) active @endif"
-                style="background-image: url('{{$banner->thumbnail}}') ">
+                style="background-image: url('{{$banner->thumbnail}}') ; border-radius: 3px;">
                 <span class="badge badge-pill badge-danger">New</span>
                 <div class="carousel-caption d-none d-md-block">
                     <h4>
-                    <a href="{{$banner->link}}" style="color:ivory">{{$banner->title}}</a></h4>
+                    <a href="{{$banner->link}}" style="color:ivory"></a></h4>
                 </div>
             </div>
             @php($j++)
             @endforeach
         </div>
-    </div>
+
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
@@ -38,17 +42,17 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
-    </div>
-
-</header>
+ </div>
+<br>
 <div class="col-md-9">
     <div id="news"></div>
 </div>
 <!-- Page New Articles -->
-<div class="container mt-5">
-    <h2 class="fontPrompt mb-3" style="border-left:10px solid #FDE313;">
-        <span style="margin-left:15px;">ข่าวใหม่ล่าสุด </span></h2>
-        <hr width="100%  size="20" color="#FDE313" align="left">
+
+    <h3 class="fontPrompt mb-3" style="border-left: 6px solid #FDE313;
+    background-color: #fffff2;">
+        <span style="margin-left:15px; "><i class="fas fa-newspaper"></i> ข่าวใหม่ล่าสุด </span></h3>
+        <hr width="100%" size="20" color="#FDE313" align="left">
 
     <div class="row">
         @foreach ($latestArticle as $article)
@@ -71,15 +75,15 @@
         @endforeach
     </div>
 
+    <br>
 
 
-</div>
 
 
-<div class="container">
 
-        <h2 class="fontPrompt mb-3" style="border-left:10px solid #FDE313;">
-                <span style="margin-left:15px;">หมวดหมู่ข่าว </span></h2>
+        <h3 class="fontPrompt mb-3" style=" border-left: 6px solid #FDE313;
+        background-color: #fffff2; ">
+                <span style="margin-left:15px; "><i class="fas fa-layer-group"></i> หมวดหมู่ข่าว </span></h3>
                 <hr width="100%  size="20" color="#FDE313" align="left">
     <div class="col-lg-9">
         <div class="row">

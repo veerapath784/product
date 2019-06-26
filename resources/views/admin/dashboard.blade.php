@@ -3,7 +3,11 @@
 
  <div class="container-fluid">
             <h3 class="text-center mt-5">ยินดีต้อนรับเข้าสู่ !!</h3>
-            <h1 class="text-center mt-5">ระบบจัดการโฆษณาข่าวสาร</h1>
+
+ <div class="container-fluid">
+        <div class="text-center">
+                <img class="img-fluid rounded " width="30%" src="{{$logo->thumbnail}}" alt=""
+                > </div>
 
 
 

@@ -10,6 +10,7 @@ use App\Banner;
 use App\Article;
 use App\User;
 use App\Fbpage;
+use App\Logo;
 
 class DashboardController extends Controller
 {
@@ -26,6 +27,7 @@ class DashboardController extends Controller
             'latestCategory' => Category::orderBy('id', 'desc')->first(),
             'users' =>  User::all(),
             'fbpage' => Fbpage::first(),
+            'logo' => Logo::first(),
             ]);
     }
 }

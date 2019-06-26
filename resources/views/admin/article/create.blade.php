@@ -16,7 +16,7 @@
                 <ul>
                     @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
-                    @endforeach
+                    @endforeach 
                 </ul>
             </div>
             @endif
@@ -39,7 +39,6 @@
                     <div class="tab-pane active" id="th">
                         <div class="form-group">
                             <label><i class="fa fa-image"></i> รูปภาพ ข่าว</label>
-
                             <div class="form-group">
                                 <input name="thumbnail" type="file">
                             </div>

@@ -48,7 +48,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">SRS Admin <sup>2</sup></div>
+        <div class="sidebar-brand-text mx-3"> Admin <sup>2</sup></div>
       </a>
 
       <!-- Divider -->
@@ -112,6 +112,11 @@
             <i class="fa fa-street-view" aria-hidden="true"></i>
           <span>เพื่ม google maps</span></a>
       </li>
+      <li class="nav-item">
+            <a class="nav-link" href="/admin/logo">
+                <i class="fas fa-images"></i>
+              <span>เพื่ม logo</span></a>
+          </li>
 
 
       <!-- Divider -->
@@ -196,11 +201,12 @@
         @yield('content')
 
         </div>
+      </div>
         <!-- /.container-fluid -->
 
       </div>
       <!-- End of Main Content -->
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">

@@ -13,30 +13,42 @@
 
     <!-- Bootstrap core CSS -->
     <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Latest compiled and minified CSS -->
+
+
 
     <!-- Custom styles for this template -->
     <link href="/css/modern-business.css" rel="stylesheet">
 
+
     <link href="https://fonts.googleapis.com/css?family=Prompt|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
+    <style>
+    body{
+        background-color: #d4d4d4;
+    }
+    </style>
 </head>
 
-<body style="font-family: 'Prompt', sans-serif;">
+<body  style="font-family: 'Prompt', sans-serif; " >
+
+
     <!-- Navigation -->
-    <div class="container">
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand ml-5" href="/"> <span><i class="fa fa-scribd" aria-hidden="true"></i></span>
-               MeShop</a>
+
+        <nav class="navbar  navbar-expand-lg navbar-light bg-light fixed-top" style="border-bottom: 3px solid #FDE313;">
+                <div class="container">
+
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav nav-fill w-100">
                     <li class="nav-item">
-                        <a class="nav-link" href="/">หน้าหลัก</a>
+                        <a class="nav-link" href="/"><i class="fas fa-home"></i> หน้าหลัก</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/contact">ติดต่อเรา</a>
@@ -47,26 +59,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/#news">ข่าวใหม่</a>
                     </li>
-                    <li class="nav-item dropdown ">
-                        <a class="nav-link " href="#" id="navbarDropdownBlog" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-caret-down"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="navbarDropdownBlog">
-                            @if (Auth::guest())
-                            <a class="dropdown-item" href="{{ url('/login') }}">เข้าสู่ระบบ</a>
-                            <a class="dropdown-item" href="{{ url('/register') }}">สมัคสมาชิก</a>
-                            @else
 
-                            <a href="#" class="dropdown-item" data-toggle="dropdown" role="button"
-                                aria-expanded="false"> <a class="dropdown-item" href="{{ url('/admin') }}">{{ Auth::user()->fullname }}</a> <span class="caret"></span></a>
-
-
-
-                            <a class="dropdown-item" href="{{ url('/logout') }}">ออกจากระบบ</a>
-                            @endif
-                        </div>
-                    </li>
                 </ul>
             </div>
         </nav>
@@ -75,18 +68,46 @@
     <!-- /.container -->
 
     <!-- Footer -->
-    <footer class="py-4 bg-dark">
+    <footer class="py-4 " style=" background: linear-gradient(to bottom, #3E5151 0%, #DECBA4 100%); border-top: 3px solid #FDE313;">
         <div class="container">
-            <div class="m-0 text-center text-white">
+            <div class="m-0 text-center text-white" >
                 <i class="fa fa-copyright text-warning"></i> สงวนลิขสิทธิ์ พ.ศ. 2561, <span class="text-warning">ติดต่อผู้ดูแลระบบ :</span>  Veerapath784@gmail.com
-            </div>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+                    @if (Auth::guest())
+                    <a style="color:#FDE313;" href="{{ url('/login') }}">Admin</a>
+                    @else
+
+                    <a href="#" style="color:#FDE313;"  data-toggle="dropdown" role="button"
+                        aria-expanded="false"> <a style="color:#FDE313;"   href="{{ url('/admin') }}">{{ Auth::user()->fullname }}</a> <span class="caret"></span></a>
+
+
+
+                    @endif
+                </div>
         </div>
         <!-- /.container -->
     </footer>
 
     <!-- Bootstrap core JavaScript -->
     <script src="/vendor/jquery/jquery.min.js"></script>
-    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    {{-- <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> --}}
+
+
+
+
+
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="/js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="/js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="/js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="/js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="/js/active.js"></script>
 
 </body>
 

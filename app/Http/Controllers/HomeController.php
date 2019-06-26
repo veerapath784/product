@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Article;
 use App\User;
 use App\Fbpage;
+use App\Contact;
+use App\Logo;
 
 class HomeController extends Controller
 {
@@ -20,6 +22,8 @@ class HomeController extends Controller
             'latestCategory' => Category::orderBy('id', 'desc')->first(),
             'users' =>  User::all(),
             'fbpage' => Fbpage::first(),
+            'contact' => Contact::first(),
+            'logo' => LOgo::first(),
             ]);
     }
 
