@@ -46,4 +46,36 @@
             </table>
         </div>
 
+        @section('script')
+        <script>
+            var deleteItem = function deleteItem(id) {
+
+                swal.fire({
+                    title: "แน่ใจหรือไม่ ?",
+                    text: "คุณต้องการลบข้อมูลนี้จริงหรือไม่ ?",
+                    type: "warning",
+                    showCancelButton: true,
+                }).then(function (result) {
+                    if (result.value) {
+                        axios.delete('/admin/article/' + id).then(function (response) {
+                            window.location.href = "/admin/article/";
+                        }).catch(function (error) {
+                            console.log(error.response)
+                            swal('เกิดข้อผิดพลาด', 'ไม่สามารถลบข้อมูลได้ \n ' + error.response.statusText,
+                                'error');
+                        });
+                    }
+                })
+
+
+            }
+        </script>
+    </div>
+    @endsection
+</div>
+</div>
+</div>
+</div>
+
 @endsection
+

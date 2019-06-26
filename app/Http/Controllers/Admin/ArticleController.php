@@ -137,8 +137,8 @@ class ArticleController extends Controller
      */
     public function destroy($id)
     {
-        $product = \App\Banner::find($id);
-        $product->delete();
+        $article = \App\Article::find($id);
+        $article->delete();
         return response()->json();
     }
 }
