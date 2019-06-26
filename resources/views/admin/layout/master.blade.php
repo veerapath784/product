@@ -86,6 +86,11 @@
           <span>จัดการข่าว</span>
         </a>
       </div>
+      <li class="nav-item">
+            <a class="nav-link" href="http://www.project3.cmru.ac.th/60134740/admin/index.php">
+                <i class="fas fa-images"></i>
+              <span>จัดการสินค้า</span></a>
+          </li>
 
       <li class="nav-item">
         <a class="nav-link" href="/admin/category">
