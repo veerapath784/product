@@ -23,7 +23,7 @@ class HomeController extends Controller
             'users' =>  User::all(),
             'fbpage' => Fbpage::first(),
             'contact' => Contact::first(),
-            'logo' => LOgo::first(),
+            'logo' => Logo::first(),
             ]);
     }
 
