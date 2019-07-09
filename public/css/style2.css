@@ -1,0 +1,36 @@
+body {
+    font-size: 14px;
+    font-family: 'Prompt', sans-serif;
+    background-color: #f5f5f5;
+    background-image: repeating-linear-gradient(-45deg,
+        transparent 25%, rgba(0,0,0,0.02) 25%,
+        rgba(0,0,0,0.02) 50%, transparent 50%,
+        transparent 75%, rgba(0,0,0,0.02) 75%);
+    background-size: 10em 10em;
+
+}
+.navb{
+    border-bottom: 1px solid rgb(226, 200, 1); 
+    font-weight: bold; 
+    font-size:18px;
+    background-color: #F4D03F  ;
+    border-left: 10px solid  rgba(0,0,0,.5); 
+    border-right: 10px solid  rgba(0,0,0,.5); 
+    border-top: 2px solid  rgba(0,0,0,.5);  
+    border-bottom: 2px solid  rgba(0,0,0,.5); 
+}
+footer{
+    background-color:#F4D03F   ;
+    border-top: 1px solid  rgba(0,0,0,.5);
+}
+a{
+    color:#c31432;
+}
+.nav2{
+    background-color: #fff;
+    padding-top:10px;
+    border-radius: 3px;
+    border-top: 1px solid LightGray;  
+    border-left: 1px solid LightGray;   
+    border-right: 1px solid LightGray;
+}

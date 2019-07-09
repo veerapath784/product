@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Contact;
+use App\Logo;
 
 class ShowcontactController extends Controller
 {
@@ -12,6 +13,7 @@ class ShowcontactController extends Controller
         return view('showcontact',[
 
             'contact' => Contact::first(),
+            'logos' => Logo::first(),
             ]);
     }
 }

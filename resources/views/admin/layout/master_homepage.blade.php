@@ -19,27 +19,33 @@
 
     <!-- Custom styles for this template -->
     <link href="/css/modern-business.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style2.css">
+    <link rel="stylesheet" href="/css/style-homepage.css">
 
 
     <link href="https://fonts.googleapis.com/css?family=Prompt|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
     <style>
-    body{
-        background-color: #d4d4d4;
-    }
+    
     </style>
 </head>
 
-<body  style="font-family: 'Prompt', sans-serif; " >
+<body>
+        <div class="container mt-1  logo" style="border-top: 1px solid LightGray;">
+        <div class="text-center">
+            <img class="img-fluid rounded" src="{{$logos->thumbnail}}" alt="" style="background-repeat: no-repeat;
+            background-size: 100% 100%; max-width: 100%; height:200px;"> </div>
+        <div class="container"><i class="fas fa-phone-square"></i> Tel. {{$contact->phone}}</div>
+    </div>
 
 
     <!-- Navigation -->
-
-        <nav class="navbar  navbar-expand-lg navbar-light bg-light fixed-top" style="border-bottom: 3px solid #FDE313;">
+   
+    <div class="container mt-3 nav2" style=" 
+   ">
+     <div >
+        <nav class=" navbar  navbar-expand-lg navbar-light  navb" >
                 <div class="container">
-
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -49,6 +55,7 @@
                     <ul class="navbar-nav nav-fill w-100">
                     <li class="nav-item">
                         <a class="nav-link" href="/"><i class="fas fa-home"></i> หน้าหลัก</a>
+                        
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/contact">ติดต่อเรา</a>
@@ -64,22 +71,23 @@
             </div>
         </nav>
     </div>
+</div>
     @yield('content')
     <!-- /.container -->
 
     <!-- Footer -->
-    <footer class="py-4 " style=" background: linear-gradient(to bottom, #3E5151 0%, #DECBA4 100%); border-top: 3px solid #FDE313;">
+    <footer class="py-4">
         <div class="container">
             <div class="m-0 text-center text-white" >
-                <i class="fa fa-copyright text-warning"></i> สงวนลิขสิทธิ์ พ.ศ. 2561, <span class="text-warning">ติดต่อผู้ดูแลระบบ :</span>  Veerapath784@gmail.com
+                <i class="fa fa-copyright text-dark"></i> สงวนลิขสิทธิ์ พ.ศ. 2561, <span class="text-dark">ติดต่อผู้ดูแลระบบ :</span>  Veerapath784@gmail.com
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
                     @if (Auth::guest())
-                    <a style="color:#FDE313;" href="{{ url('/login') }}">Admin</a>
+                    <a  href="{{ url('/login') }}">Admin</a>
                     @else
 
-                    <a href="#" style="color:#FDE313;"  data-toggle="dropdown" role="button"
-                        aria-expanded="false"> <a style="color:#FDE313;"   href="{{ url('/admin') }}">{{ Auth::user()->fullname }}</a> <span class="caret"></span></a>
+                    <a href="#"   data-toggle="dropdown" role="button"
+                        aria-expanded="false"> <a    href="{{ url('/admin') }}">{{ Auth::user()->fullname }}</a> <span class="caret"></span></a>
 
 
 

@@ -1,0 +1,21 @@
+.logo{
+    background-color: #fff;
+    padding-top:10px;
+    border-left: 1px solid LightGray;
+    border-right: 1px solid LightGray;
+    border-bottom: 1px solid LightGray;
+    
+
+}
+.latestArticle{
+    background-color: #fff;
+    padding-top:10px;
+    border-radius: 3px;
+    border: 1px solid LightGray;
+    
+}
+h3{
+    border-left: 6px solid #FDE313;
+    background-color: #fffff2;
+
+}

@@ -110,17 +110,17 @@
       <li class="nav-item">
         <a class="nav-link" href="/admin/fb_page">
           <i class="fa fa-facebook-square"></i>
-          <span>เพื่มเพจ facebook</span></a>
+          <span>เพจ facebook</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/admin/contact">
             <i class="fa fa-street-view" aria-hidden="true"></i>
-          <span>เพื่ม google maps</span></a>
+          <span>แผนที่ร้าน</span></a>
       </li>
       <li class="nav-item">
             <a class="nav-link" href="/admin/logo">
                 <i class="fas fa-images"></i>
-              <span>เพื่ม logo</span></a>
+              <span>logo</span></a>
           </li>
 
 

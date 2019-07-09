@@ -11,19 +11,25 @@
 <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer">
 </script>
 
-<div class="container">
+<div class="container mt-2 bm-2"
+    style="background-color: #fff; padding-top:10px;  border-radius: 3px;    border: 1px solid LightGray;">
     <div class="row">
-        <ol class="breadcrumb bg-white">
+
+        <ul class="breadcrumb ml-2">
             <li><a href="{!! url('/') !!}">หน้าแรก </a></li>
             &nbsp;&nbsp;<i class="fa fa-angle-double-right mt-1" aria-hidden="true"></i>&nbsp;&nbsp;
 
             <li>
-                {!!
-                    $article->category->name !!}</li>
+                {!!$article->category->name !!}</li>
             &nbsp;&nbsp;<i class="fa fa-angle-double-right mt-1" aria-hidden="true"></i>&nbsp;&nbsp;
             <li class="active">{!! $article->title !!}
             </li>
-        </ol>
+
+
+        </ul>
+
+
+
         <div class="col-md-9">
 
             <h2 class="fontsupermarket">{{$article->title}}</h2>
@@ -36,14 +42,15 @@
 
         </div>
     </div>
-</div>
-<div class="container">
+
+
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-8">
             <hr>
             <p>{!!$article->detail!!}</p>
 
         </div>
+
         <div class="col-md-3">
             <iframe
                 src="https://www.facebook.com/plugins/page.php?href={{$fbpage->link}}&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1730915820521210"
@@ -55,4 +62,5 @@
         <div class="fb-comments" data-href="http://localhost:8000/news/{!! $url !!}" data-width="" data-numposts="5">
         </div>
     </div>
-</div>
+
+    <br>
