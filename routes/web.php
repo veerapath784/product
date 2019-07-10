@@ -32,19 +32,14 @@ Route::get('contact', 'ShowcontactController@index');
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(){
 
         Route::get('/', 'Admin\DashboardController@index');
-
         // user
         Route::resource('user', 'Admin\UserController');
-
         // userType
         Route::resource('userType', 'Admin\UserTypeController');
-
         // product
         Route::resource('product', 'Admin\ProductController');
-
         // category
         Route::resource('category', 'Admin\CategoryController');
-
         //Banner
         Route::resource('banner', 'Admin\BannerController');
         //Article
@@ -55,7 +50,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
         Route::resource('contact', 'Admin\ContactController');
          //Logo
         Route::resource('logo', 'Admin\LogoController');
-
         //product
         Route::resource('product', 'Admin\ProductController');
 
