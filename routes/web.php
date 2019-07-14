@@ -24,7 +24,7 @@ Route::resource('/', 'HomeController');
 
 //     return view('showcontact');
 // });
-Route::get('fbpage', 'FbpageController@index');
+// Route::get('fbpage', 'FbpageController@index');
 Route::get('/news/{id}', 'NewsController@show');
 Route::get('contact', 'ShowcontactController@index');
 

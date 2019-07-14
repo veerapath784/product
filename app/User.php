@@ -40,4 +40,24 @@ class User extends Authenticatable
     public function userType(){
         return $this->belongsTo(UserType::class);
     }
+
+    public function webLoginPost(Request $request)
+{
+    $this->validate($request, [
+        'email' => 'required|email',
+        'password' => 'required',
+    ]);
+
+
+    $remember_me = $request->has('remember_me') ? true : false;
+
+
+    if (auth()->attempt(['email' => $request->input('email'), 'password' => $request->input('password')], $remember_me))
+    {
+        $user = auth()->user();
+        dd($user);
+    }else{
+        return back()->with('error','your username and password are wrong.');
+    }
+}
 }

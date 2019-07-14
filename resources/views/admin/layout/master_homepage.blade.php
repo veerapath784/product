@@ -26,52 +26,53 @@
     <link href="https://fonts.googleapis.com/css?family=Prompt|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-    
+        #menu{
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+#menu li{
+  list-style: none;
+  display: inline-block;
+}
+#menu li a{
+  text-decoration: none;
+  position: relative;
+  color: #313131;
+  font-size: 25px;
+  font-weight: 700;
+  font-family: 'Prompt', sans-serif;
+  display: block;
+  overflow: hidden;
+  transition: 0.7s all;
+  padding: 14px 30px;
+  text-transform: uppercase;
+}
+#menu li a:before{
+  content: '';
+  width: 60px;
+
+  position: absolute;
+  border-bottom: 5px solid #313131;
+  bottom: 0;
+  right: 350px;
+  transition: 0.4s all;
+}
+#menu li a:hover:before{
+  right: 5px;
+}
     </style>
 </head>
 
 <body>
-        <div class="container mt-1  logo" style="border-top: 1px solid LightGray;">
-        <div class="text-center">
-            <img class="img-fluid rounded" src="{{$logos->thumbnail}}" alt="" style="background-repeat: no-repeat;
-            background-size: 100% 100%; max-width: 100%; height:200px;"> </div>
-        <div class="container"><i class="fas fa-phone-square"></i> Tel. {{$contact->phone}}</div>
-    </div>
 
 
-    <!-- Navigation -->
-   
-    <div class="container mt-3 nav2" style=" 
-   ">
-     <div >
-        <nav class=" navbar  navbar-expand-lg navbar-light  navb" >
-                <div class="container">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav nav-fill w-100">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/"><i class="fas fa-home"></i> หน้าหลัก</a>
-                        
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/contact">ติดต่อเรา</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="http://www.project3.cmru.ac.th/60134740/?fbclid=IwAR0SzYkfNdD19vVlgm6VsqkqsMWgquoFtcmEO01TCmhgMCM2Ph_kC6VX_rc">เลือกชมสินค้า</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/#news">ข่าวใหม่</a>
-                    </li>
 
-                </ul>
-            </div>
-        </nav>
-    </div>
-</div>
+
+
+
     @yield('content')
     <!-- /.container -->
 
@@ -87,7 +88,8 @@
                     @else
 
                     <a href="#"   data-toggle="dropdown" role="button"
-                        aria-expanded="false"> <a    href="{{ url('/admin') }}">{{ Auth::user()->fullname }}</a> <span class="caret"></span></a>
+                        aria-expanded="false"> <a    href="{{ url('/admin') }}">{{ Auth::user()->fullname }}</a> <span class="caret"></span></a> /
+                        <a style="color:red;"   href="{{ url('/logout') }}">Logout</a> <span class="caret"></span></a>
 
 
 

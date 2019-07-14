@@ -3,14 +3,13 @@
 @section('content')
 
 
-{{-- <div class="container mt-2 bm-2 logo"
-    >
-
-    <div class="text-center">
-        <img class="img-fluid rounded " width="20%" src="{{$logos->thumbnail}}" alt=""> </div>
-    <div><i class="fas fa-phone-square"></i> Tel. {{$contact->phone}}</div>
-</div> --}}
-
+<div class="container mt-1  logo" style="border-top: 1px solid LightGray;">
+        <div class="text-center">
+            <img class="img-fluid rounded" src="{{$logos->thumbnail}}" alt="" style="background-repeat: no-repeat;
+            background-size: 100% 100%; max-width: 100%; height:200px;"> </div>
+        <div class="container"><i class="fas fa-phone-square"></i> Tel. {{$contact->phone}}</div>
+    </div>
+    @include('admin.layout.navbar')
 
 
 <div class="container bm-2 logo"
@@ -138,9 +137,9 @@
                         src="https://www.facebook.com/plugins/page.php?href={{$fbpage->link}}&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1730915820521210"
                         width="340" height="214" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
                         allowTransparency="true" allow="encrypted-media"></iframe>
-                    
+
                 </div>
-                
+
             </div>
         </div>
     </div>

@@ -8,6 +8,7 @@ use App\Fbpage;
 
 class FbpageController extends Controller
 {
+
     protected $rules = [
         'link' => 'required',
 

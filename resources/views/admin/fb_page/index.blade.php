@@ -45,7 +45,6 @@
                         @endforeach
                     </tbody>
                 </table>
-            </div>
         </div>
 
 @section('script')
@@ -72,16 +71,7 @@
 
             }
     </script>
-
 </div>
 @endsection
-
-
-
-
-
-
-
-
     </div>
 @endsection
