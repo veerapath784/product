@@ -1,4 +1,4 @@
-<nav class="container">
+
         <ul class="navb" id="menu">
             <ul>
               <center>
@@ -9,4 +9,4 @@
           </center>
           </ul>
           </ul>
-        </nav>
+

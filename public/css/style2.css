@@ -10,17 +10,17 @@ body {
 
 }
 .navb{
-    border-bottom: 1px solid rgb(226, 200, 1); 
-    font-weight: bold; 
+    border-bottom: 1px solid #1565C0;
+    font-weight: bold;
     font-size:18px;
-    background-color: #F4D03F  ;
-    border-left: 10px solid  rgba(0,0,0,.5); 
-    border-right: 10px solid  rgba(0,0,0,.5); 
-    border-top: 2px solid  rgba(0,0,0,.5);  
-    border-bottom: 2px solid  rgba(0,0,0,.5); 
+    background-color: rgb(255, 255, 255)  ;
+    border-left: 10px solid  #1565C0;
+    border-right: 10px solid  #1565C0;
+    border-top: 2px solid  #1565C0;
+    border-bottom: 2px solid  #1565C0;
 }
 footer{
-    background-color:#F4D03F   ;
+    background-color:#1565C0   ;
     border-top: 1px solid  rgba(0,0,0,.5);
 }
 a{
@@ -30,7 +30,7 @@ a{
     background-color: #fff;
     padding-top:10px;
     border-radius: 3px;
-    border-top: 1px solid LightGray;  
-    border-left: 1px solid LightGray;   
+    border-top: 1px solid LightGray;
+    border-left: 1px solid LightGray;
     border-right: 1px solid LightGray;
 }

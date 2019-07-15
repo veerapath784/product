@@ -3,11 +3,12 @@
 @section('content')
 
 
-<div class="container mt-1  logo" style="border-top: 1px solid LightGray;">
+<div class=" mt-1  logo" style="border-top: 1px solid LightGray;">
         <div class="text-center">
             <img class="img-fluid rounded" src="{{$logos->thumbnail}}" alt="" style="background-repeat: no-repeat;
             background-size: 100% 100%; max-width: 100%; height:200px;"> </div>
-        <div class="container"><i class="fas fa-phone-square"></i> Tel. {{$contact->phone}}</div>
+        <div class="container" style="color:#1565C0"><i class="fas fa-phone-square" style="color:#c31432"></i> Tel. {{$contact->phone}}
+            <br><i class="fas fa-envelope-open-text" style="color:#c31432"></i> Email. {{$contact->email}}</div>
     </div>
     @include('admin.layout.navbar')
 
@@ -61,7 +62,7 @@
         <h3 class="fontPrompt mb-3" >
             <span style="margin-left:15px; "><i class="fas fa-newspaper"></i> ข่าวใหม่ล่าสุด </span></h3>
             <div class="container">
-                  <hr width="95%" size="20" color="#FDE313" align="center">
+                  <hr width="95%" size="20" color="#1565C0" align="center">
             </div>
 
         @foreach ($latestArticle as $article)
@@ -74,7 +75,7 @@
                 </div>
 
                 <div class="col-md-6">
-                    <a style="color: #F1C40F;" href="/news/{!! $article->id !!}">
+                    <a style="color: #1565C0;" href="/news/{!! $article->id !!}">
                         <h5>{{$article->title}}</h5></a>
                         <p style="color: #212F3C;">{!!$article->description!!}</p>
 
@@ -95,7 +96,7 @@
         <h3 class="fontPrompt mb-3" style=" ">
             <span style="margin-left:15px; "><i class="fas fa-layer-group"></i> หมวดหมู่ข่าว </span></h3>
             <div class="container">
-                    <hr width="95%" size="20" color="#FDE313" align="center">
+                    <hr width="95%" size="20" color="#1565C0" align="center">
               </div>
         <div class="col-lg-9">
             <div class="row">

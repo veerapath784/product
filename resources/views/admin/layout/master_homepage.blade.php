@@ -32,15 +32,17 @@
   margin-top: 10px;
   margin-bottom: 10px;
 
+
 }
 #menu li{
   list-style: none;
   display: inline-block;
+
 }
 #menu li a{
   text-decoration: none;
   position: relative;
-  color: #313131;
+  color: #1565C0;
   font-size: 25px;
   font-weight: 700;
   font-family: 'Prompt', sans-serif;
@@ -55,7 +57,7 @@
   width: 60px;
 
   position: absolute;
-  border-bottom: 5px solid #313131;
+  border-bottom: 5px solid #b92b27;
   bottom: 0;
   right: 350px;
   transition: 0.4s all;
