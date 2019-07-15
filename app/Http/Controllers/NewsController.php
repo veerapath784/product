@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Article;
 use App\Category;
 use App\Fbpage;
+use App\Logo;
+use App\Contact;
 
 class NewsController extends Controller
 {
@@ -52,7 +54,9 @@ class NewsController extends Controller
         $article = Article::find($id);
         $data = [
             'article' => $article,
-            'fbpage' => Fbpage::first()
+            'fbpage' => Fbpage::first(),
+            'logos' => Logo::first(),
+            'contact' => Contact::first(),
         ];
 
 

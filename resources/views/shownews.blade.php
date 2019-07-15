@@ -1,6 +1,8 @@
 @extends('admin.layout.master_homepage')
 @section('content')
-<br>
+@include('admin.layout.logo')
+@include('admin.layout.navbar')
+
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous"
     src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v3.3&appId=597010904140661&autoLogAppEvents=1">
@@ -56,6 +58,8 @@
                 src="https://www.facebook.com/plugins/page.php?href={{$fbpage->link}}&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1730915820521210"
                 width="340" height="214" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
                 allowTransparency="true" allow="encrypted-media"></iframe>
+
+
         </div>
     </div>
     <div class="ml-5">
