@@ -29,7 +29,9 @@
         #menu{
   margin: 0;
   padding: 0;
-  margin-top: 10px;
+  margin-top: 5px;
+  margin-left: 3px;
+  margin-right: 3px;
   margin-bottom: 10px;
 
 
@@ -81,8 +83,8 @@
     <!-- Footer -->
     <footer class="py-4">
         <div class="container">
-            <div class="m-0 text-center text-white" >
-                <i class="fa fa-copyright text-dark"></i> สงวนลิขสิทธิ์ พ.ศ. 2561, <span class="text-dark">ติดต่อผู้ดูแลระบบ :</span>  Veerapath784@gmail.com
+            <div class="m-0 text-center text-pimery" >
+                <i class="fa fa-copyright text-danger"></i> สงวนลิขสิทธิ์ พ.ศ. 2561, <span class="text-dark">ติดต่อผู้ดูแลระบบ :</span>  Veerapath784@gmail.com
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
                     @if (Auth::guest())

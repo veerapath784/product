@@ -1,6 +1,8 @@
 @extends('admin.layout.master_homepage')
 <link rel="stylesheet" href="/css/style-homepage.css">
 @section('content')
+@include('admin.layout.logo')
+@include('admin.layout.navbar')
 <div class="container logo">
 
     <div class="text-center mt-3">
