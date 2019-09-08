@@ -12,7 +12,7 @@ class LogoController extends Controller
 
     protected $rules = [
 
-        'thumbnail' => 'required|file',
+
 
     ];
     protected $path = "/admin/logo";
@@ -47,18 +47,10 @@ class LogoController extends Controller
      */
     public function store(Request $request)
     {
-        $imageName = "https://via.placeholder.com/450x580";
-        if (request()->has('thumbnail')) {
-            $imageUpload = new ImageUpload(request()->file('thumbnail'), '/images/logo');
-            $imageUpload->width = 1900;
-            $imageUpload->upload();
-            $imageUpload->resize('aspect');
-            $imageName = $imageUpload->save();
-        }
 
         $request->validate($this->rules);
         $logo = new Logo();
-        $logo->thumbnail = $imageName;
+        $logo->logo = $request->input('logo');
         $logo->save();
         return redirect($this->path);
 
@@ -99,18 +91,11 @@ class LogoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $imageName = "https://via.placeholder.com/450x580";
-        if (request()->has('thumbnail')) {
-            $imageUpload = new ImageUpload(request()->file('thumbnail'), '/images/logo');
-            $imageUpload->width = 1900;
-            $imageUpload->upload();
-            $imageUpload->resize('aspect');
-            $imageName = $imageUpload->save();
-        }
+
 
         $request->validate($this->rules);
         $logo = logo::find($id);
-        $logo->thumbnail = $imageName;
+        $logo->logo = $request->input('logo');
         $logo->save();
         return redirect($this->path);
     }

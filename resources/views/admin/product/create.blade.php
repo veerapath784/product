@@ -20,15 +20,10 @@
 
             <form action="/admin/product" method="POST" enctype="multipart/form-data">
                 @csrf
-
                 <div class="form-group">
-                        <label for="inputClientTypeId">เลือกหมวดหมู่ </label>
-                        <select name="category_id" id="inputClientTypeId" class="form-control">
-                            @foreach($categorys as $category)
-                            <option value="{{$category->id}}">{{$category->name}}</option>
-                            @endforeach
-                        </select>
-                    </div>
+                    <label for="inputFullcode">รหัส สินค้า</label>
+                    <input type="text" class="form-control" name="code" id="inputcode" required placeholder="กรอกรหัส สินค้า">
+                </div>
 
                 <div class="form-group mt-3">
                    <div class="form-group">
@@ -36,7 +31,7 @@
                        <input type="file" name="thumbnail" />
                    </div>
                     </div>
-               
+
 
                 <div class="form-group">
                     <label for="inputFullname">ชื่อ สินค้า</label>

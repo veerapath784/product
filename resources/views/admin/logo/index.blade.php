@@ -7,9 +7,9 @@
     <div class="card-heading">
         <div class="container mt-3">
             <h4 class="card-title">รายการ logo</h4>
-            {{-- <span class="float-right"><a href="/admin/logo/create" class="btn btn-sm btn-success"><i
+            <span class="float-right"><a href="/admin/logo/create" class="btn btn-sm btn-success"><i
                         class="fa fa-plus"></i>
-                    เพิ่ม logo</a></span> --}}
+                    เพิ่ม logo</a></span>
         </div>
     </div>
     <div class="card-body">
@@ -26,7 +26,7 @@
                     @foreach($logos as $logo)
                     <tr class="text-center">
                         <td>{{$logo->id}}</td>
-                        <td class="text-center"><img src="{{$logo->thumbnail}}" alt="{{$logo->name}}" width="50" ></td>
+                        <td class="text-center">{{$logo->logo}}</td>
 
 
                         <td >

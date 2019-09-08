@@ -26,11 +26,8 @@
                 <div class="tab-content">
                     <div class="tab-pane active" id="th">
                         <div class="form-group">
-                            <label><i class="fa fa-image"></i> รูป logo</label>
-
-                            <div class="form-group">
-                                <input name="thumbnail" type="file">
-                            </div>
+                            <label for="inputFullname">ชื่อร้าน</label>
+                            <input type="text" class="form-control" name="logo"  required placeholder="">
                         </div>
 
                             </div>

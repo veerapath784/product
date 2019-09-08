@@ -14,30 +14,30 @@
     </div>
     <div class="card-body">
         <div class="table-responsive">
-            <table class="table table-bordered ">
+            <table  class="table table-bordered ">
                 <thead>
                 <tr>
                     <th  class="text-center">#</th>
-                    <th  class="text-center">รูปสินค้า</th>
-                    <th  class="text-center">ชื่อ สินค้า</th>
-                    <th  class="text-center">หมวดหมู่สินค้า</th>
+                    <th  class="text-center">รหัสสินค้า</th>
+                    <th style="width: 350px;" class="text-center">รูปสินค้า</th>
+                    <th style="width: 150px;"  class="text-center">ชื่อ สินค้า</th>
                     <th  class="text-center">จำนวน</th>
                     <th  class="text-center" width="500">รายละเอียด</th>
                     <th  class="text-center">ราคา</th>
-                    <th  class="text-center">จัดการ</th>
+                    <th style="width: 150px;" class="text-center">จัดการ</th>
                 </tr>
                 </thead>
                 <tbody>
                     @foreach($products as $product)
                     <tr>
                         <td class="text-center">{{$product->id}}</td>
-                        <td class="text-center"><img src="{{$product->thumbnail}}" alt="{{$product->name}}"></td>
+                        <td class="text-center">{{$product->code}}</td>
+                        <td class="text-center"><img width="50%;" src="{{$product->thumbnail}}" alt="{{$product->name}}"></td>
                         <td class="text-center">{{$product->name}}</td>
-                        <td class="text-center">{{$product->category->name}}</td>
                         <td class="text-center">{{$product->quantity}}</td>
                         <td>{{$product->detail}}</td>
                         <td class="text-center">{{$product->price}}</td>
-                        <td class="text-center">
+                        <td class="text-center" >
                             <div class="button-group">
                                 <a href="/admin/product/{{$product->id}}/edit" class="btn btn-warning btn-sm"><i
                                         class="fa fa-edit"></i></a>

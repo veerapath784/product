@@ -43,7 +43,7 @@
                                     >
                             </div>
                             <div class="form-group">
-                                <label>วัน - เวลาเริ่มต้น : <span class="text-danger">*</span></label>
+                                <label>วัน - เวลาสิ้นสุด : <span class="text-danger">*</span></label>
                                 <input class="form-control"  id="end" name="end" type="date"
                                     >
                             </div>

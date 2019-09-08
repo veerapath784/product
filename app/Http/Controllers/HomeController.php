@@ -9,15 +9,17 @@ use App\User;
 use App\Fbpage;
 use App\Contact;
 use App\Logo;
+use App\Product;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        return view('homepage',[
+        return view('test',[
             'categories' => Category::all(),
-            'banners' => Banner::all(),
-            'latestArticle' => Article::orderBy('id', 'desc')->limit(4)->get(),
+            'banners' => Banner::first(),
+            'latestArticle' => Article::orderBy('id', 'desc')->limit(3)->get(),
+            'latestProduct' => Product::orderBy('id', 'desc')->limit(3)->get(),
             'articles' => Article::all(),
             'latestCategory' => Category::orderBy('id', 'desc')->first(),
             'users' =>  User::all(),
@@ -25,6 +27,13 @@ class HomeController extends Controller
             'contact' => Contact::first(),
             'logos' => Logo::first(),
             ]);
+    }
+
+
+    public function product(){
+        return view('product',[
+            'products' => Product::all(),
+        ]);
     }
 
 

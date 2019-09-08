@@ -23,18 +23,14 @@
                 @csrf
 
                 <div class="form-group">
-                        <label for="inputClientTypeId">เลือกหมวดหมู่ </label>
-                        <select name="category_id" id="inputClientTypeId" class="form-control">
-                            @foreach($categorys as $category)
-                            <option @if($category->id == $product->category_id) selected @endif value="{{$category->id}}">{{$category->name}}</option>
-                            @endforeach
-                        </select>
-                    </div>
+                    <label for="inputFullname">รหัส สินค้า</label>
+                <input type="text" class="form-control" name="code" id="inpuName" value="{{$product->code}}" required placeholder="กรอกรหัส สินค้า">
+                </div>
 
                     <div class="form-group mt-3">
                    <div class="form-group">
                        <label>เลือกไฟล์</label>
-                       <input type="file" name="thumbnail" />
+                   <input type="file" name="thumbnail" value="{!!$product->thumnail!!}">
                    </div>
                     </div>
 
@@ -55,9 +51,9 @@
                     <label for="quantity">ราคา สินค้า</label>
                     <input type="number" min="0" class="form-control" name="price" value="{{$product->price}}" id="inputPrice" required placeholder="กรอกราคา สินค้า">
                 </div>
-                <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> เพิ่มสินค้า</button>
+                <button type="submit" class="btn btn-warning"> บันทึกข้อมูล</button>
             </form>
         </div>
     </div>
-</div>
+
 @endsection

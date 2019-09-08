@@ -22,7 +22,7 @@
                     {{-- <th>รายละเอียดข่าว</th> --}}
                     <th width="100">จัดการ</th>
                 </tr>
-                </thead>
+
                 <tbody>
                     @foreach($articles as $article)
                     <tr>
@@ -71,11 +71,10 @@
             }
         </script>
     </div>
+</div>
+</div>
     @endsection
-</div>
-</div>
-</div>
-</div>
+
 
 @endsection
 

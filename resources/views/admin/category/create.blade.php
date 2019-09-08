@@ -26,9 +26,10 @@
                     <input type="text" class="form-control" name="name" id="inpuName" required placeholder="กรอกชื่อ หมวดหมู่ข่าวสาร">
                 </div>
 
-                <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> เพิ่มหมวดหมู่ข่าวสาร</button>
+                <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> หมวดหมู่ข่าวสาร</button>
             </form>
         </div>
     </div>
-</div>
+
 @endsection
+</div>

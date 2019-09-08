@@ -19,11 +19,12 @@
 // });
 
 Route::resource('/', 'HomeController');
+Route::get('/product', 'HomeController@product');
 
-// Route::get('/play' ,function (){
+//  Route::get('/play' ,function (){
 
-//     return view('showcontact');
-// });
+//      return view('test');
+//  });
 // Route::get('fbpage', 'FbpageController@index');
 Route::get('/news/{id}', 'NewsController@show');
 Route::get('contact', 'ShowcontactController@index');

@@ -6,8 +6,7 @@
 
  <div class="container-fluid">
         <div class="text-center">
-                <img class="img-fluid rounded " width="30%" src="{{$logos->thumbnail}}" alt=""
-                > </div>
+               </div>
 
 
 
